@@ -1,0 +1,20 @@
+{
+    "Gold": [
+        "T-W", "T&T-W", "T&T-W", "T&T-W&A", "P&T-B&W", "P-B&W", "P-B", "T-B", "P&T-B&W", "P&P-B", "T-B", "T-A", "T-A"
+    ],
+    "CBR-Plan": [
+        "T&T-B&W", "P&T-B&W&A", "T-W", "T-W", "T-B&W", "P&P-B&W", "P&T-B&A", "T-W", "T&T-B&W&A", "P&T-B&W", "P&P-B", "P-B&W&A"
+    ],
+    "CBR": [
+        "T&T-B&W", "P-B&W", "P&T-B&W", "P&T-B&W", "P-B&W", "P-B&W", "T&T-A"
+    ],
+    "Temp":[
+        "P-B", "P-B", "P-B", "P-B", "P-B", "P-B", "T-A", "T-A"
+    ],
+    "MP": [
+        "T&T-W", "T&T-B", "P-B&W", "T-A", "T&T-W&A", "P-B&W", "P-B", "P-B", "P-B", "T-A", "T-A"
+    ],
+    "Ent": [
+        "T-B&A", "T&T-B&W", "P&T-B&W", "P-B&W", "P-B&W", "P&P-B&W", "P&P-B", "P-B&W", "P&P-B&W", "P-B&W", "P-B&W", "P&P-B&W", "P-A"
+    ]
+}
