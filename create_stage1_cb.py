@@ -1,5 +1,4 @@
 import json
-import numpy as np
 from datasets import load_dataset
 from tqdm import tqdm
 from utils import GetGameRepresentation
@@ -18,9 +17,7 @@ order_cb_only_sol = json.load(open('data/stage1_case_base.json'))
 game_rep_obj = GetGameRepresentation()
 
 ordering_cb_reps = []
-# for idx, entry in tqdm(enumerate(dataset['train'])):
-for idx, entry in tqdm(enumerate(dataset['validation'])):
-    # if int(entry['gem_id'].split('-')[-1]) > 2460:
+for idx, entry in tqdm(enumerate(dataset['train'])):
     cb_sols = list(filter(lambda x: x['problem_id'] == entry['gem_id'], order_cb_only_sol))
     for sol in cb_sols:
         ordering_cb_reps.append({"problem": game_rep_obj.get_full_game_repr(entry), "solution": sol['solution']})

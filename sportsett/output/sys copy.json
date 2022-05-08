@@ -1,34 +1,33 @@
 {
     "Gold": [
-		"Chicago Bulls|T-W", "Philadelphia 76ers & Chicago Bulls|T&T-W", "Philadelphia 76ers & Chicago Bulls|T&T-W", 
-        "Philadelphia 76ers & Chicago Bulls|T&T-W&A", "Joel Embiid & Philadelphia 76ers|P&T-B&W", "Ben Simmons|P-B&W", 
-        "Robert Covington|P-B", "Philadelphia 76ers|T-B", "Zach LaVine & Chicago Bulls|P&T-B&W",
-        "Bobby Portis & Antonio Blakeney|P&P-B", "Chicago Bulls|T-B", "Chicago Bulls|T-A", "Philadelphia 76ers|T-A"
+      "Chicago Bulls|T-W", "Philadelphia 76ers & Chicago Bulls|T&T-W", "Philadelphia 76ers & Chicago Bulls|T&T-W", 
+      "Philadelphia 76ers & Chicago Bulls|T&T-W&A", "Joel Embiid & Philadelphia 76ers|P&T-B&W", "Ben Simmons|P-B&W", "Robert Covington|P-B", 
+      "Philadelphia 76ers|T-B", "Zach LaVine & Chicago Bulls|P&T-B&W","Bobby Portis & Antonio Blakeney|P&P-B", "Chicago Bulls|T-B", "Chicago Bulls|T-A", 
+      "Philadelphia 76ers|T-A"
     ], 
     "CBR-Plan": [
-		"Philadelphia 76ers & Chicago Bulls|T&T-B&W", "Ben Simmons & Philadelphia 76ers|P&T-B&W&A", "Philadelphia 76ers|T-W", 
-        "Chicago Bulls|T-W", "Philadelphia 76ers|T-B&W", "Ben Simmons & Joel Embiid|P&P-B&W", 
-        "Dario \u0160ari\u0107 & Philadelphia 76ers|P&T-B&A", "Philadelphia 76ers|T-W", "Philadelphia 76ers & Chicago Bulls|T&T-B&W&A",
-        "Joel Embiid & Philadelphia 76ers|P&T-B&W", "Ben Simmons & Landry Shamet|P&P-B", "Joel Embiid|P-B&W&A"
+      "Philadelphia 76ers & Chicago Bulls|T&T-B&W", "Ben Simmons & Philadelphia 76ers|P&T-B&W&A", "Philadelphia 76ers|T-W", "Chicago Bulls|T-W", 
+      "Philadelphia 76ers|T-B&W", "Ben Simmons & Joel Embiid|P&P-B&W", "Dario \u0160ari\u0107 & Philadelphia 76ers|P&T-B&A", "Philadelphia 76ers|T-W", 
+      "Philadelphia 76ers & Chicago Bulls|T&T-B&W&A", "Joel Embiid & Philadelphia 76ers|P&T-B&W", "Ben Simmons & Landry Shamet|P&P-B",
+      "Joel Embiid|P-B&W&A"
     ],
     "Template": [
-		"Joel Embiid|P-B", "Zach LaVine|P-B", "Robert Covington|P-B", "Bobby Portis|P-B", "Antonio Blakeney|P-B", "Jabari Parker|P-B", 
-        "Philadelphia 76ers|T-A", "Philadelphia 76ers|T-A"
+      "Joel Embiid|P-B", "Zach LaVine|P-B", "Robert Covington|P-B", "Bobby Portis|P-B", "Antonio Blakeney|P-B", "Jabari Parker|P-B", 
+      "Philadelphia 76ers|T-A", "Philadelphia 76ers|T-A"
     ],
     "CBR": [
-		"Philadelphia 76ers & Chicago Bulls|T&T-B&W", "Ben Simmons|P-B&W", "Joel Embiid & Philadelphia 76ers|P&T-B&W", 
-        "Robert Covington & Philadelphia 76ers|P&T-B&W", "Bobby Portis|P-B&W", "Zach LaVine|P-B&W", 
-        "Philadelphia 76ers & Chicago Bulls|T&T-A"
+		  "Philadelphia 76ers & Chicago Bulls|T&T-B&W", "Ben Simmons|P-B&W", "Joel Embiid & Philadelphia 76ers|P&T-B&W", 
+      "Robert Covington & Philadelphia 76ers|P&T-B&W", "Bobby Portis|P-B&W", "Zach LaVine|P-B&W", "Philadelphia 76ers & Chicago Bulls|T&T-A"
     ],
     "Macro-Plan": [
-		"Philadelphia 76ers & Chicago Bulls|T&T-W", "Philadelphia 76ers & Chicago Bulls|T&T-B", "Ben Simmons|P-B&W", 
-        "Philadelphia 76ers|T-A", "Philadelphia 76ers & Chicago Bulls|T&T-W&A", "Zach LaVine|P-B&W", "Jabari Parker|P-B", 
-        "Bobby Portis|P-B", "Jabari Parker|P-B", "Chicago Bulls|T-A", "Philadelphia 76ers|T-A"
+      "Philadelphia 76ers & Chicago Bulls|T&T-W", "Philadelphia 76ers & Chicago Bulls|T&T-B", "Ben Simmons|P-B&W", "Philadelphia 76ers|T-A", 
+      "Philadelphia 76ers & Chicago Bulls|T&T-W&A", "Zach LaVine|P-B&W", "Jabari Parker|P-B", "Bobby Portis|P-B", "Jabari Parker|P-B", 
+      "Chicago Bulls|T-A", "Philadelphia 76ers|T-A"
     ],
     "Entity-Model": [
-		"Philadelphia 76ers|T-B&A", "Philadelphia 76ers & Chicago Bulls|T&T-B&W", "Joel Embiid & Philadelphia 76ers|P&T-B&W", 
-        "Zach LaVine|P-B&W", "Dario \u0160ari\u0107|P-B&W", "Amir Johnson & Bobby Portis|P&P-B&W", "Ben Simmons & T.J. McConnell|P&P-B", 
-        "Justin Holiday|P-B&W", "Joel Embiid & Justin Holiday|P&P-B&W", "Zach LaVine|P-B&W", "Dario \u0160ari\u0107|P-B&W", 
-        "Ben Simmons & T.J. McConnell|P&P-B&W", "Antonio Blakeney|P-A"
+      "Philadelphia 76ers|T-B&A", "Philadelphia 76ers & Chicago Bulls|T&T-B&W", "Joel Embiid & Philadelphia 76ers|P&T-B&W", "Zach LaVine|P-B&W", 
+      "Dario \u0160ari\u0107|P-B&W", "Amir Johnson & Bobby Portis|P&P-B&W", "Ben Simmons & T.J. McConnell|P&P-B", "Justin Holiday|P-B&W", 
+      "Joel Embiid & Justin Holiday|P&P-B&W", "Zach LaVine|P-B&W", "Dario \u0160ari\u0107|P-B&W", "Ben Simmons & T.J. McConnell|P&P-B&W", 
+      "Antonio Blakeney|P-A"
     ]
 }

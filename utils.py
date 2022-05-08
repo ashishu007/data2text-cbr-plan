@@ -14,19 +14,33 @@ class ExtractEntities:
         teams_mentioned = [] #set()
         vname, vplace = item['teams']['vis']['name'], item['teams']['vis']['place']
         hname, hplace = item['teams']['home']['name'], item['teams']['home']['place']
+        hnon, hnop = item['teams']['home']['next_game']['opponent_name'], item['teams']['home']['next_game']['opponent_place']
+        vnon, vnop = item['teams']['vis']['next_game']['opponent_name'], item['teams']['vis']['next_game']['opponent_place']
+        hng_ents = [hnon, hnop, f"{hnop} {hnon}"]
+        vng_ents = [vnon, vnop, f"{vnop} {vnon}"]
         home_team = [hname, hplace, f'{hplace} {hname}']
         vis_team = [vname, vplace, f'{vplace} {vname}']
         home_flag = False
         vis_flag = False
+        hng_flag = False
+        vng_flag = False
         for ent in team_ents_in_sent:
             if ent in home_team:
                 home_flag = True
             if ent in vis_team:
                 vis_flag = True
+            if ent in hng_ents:
+                hng_flag = True
+            if ent in vng_ents:
+                vng_flag = True
         if home_flag:
             teams_mentioned.append(f'{hplace} {hname}')
         if vis_flag:
             teams_mentioned.append(f'{vplace} {vname}')
+        if hng_flag:
+            teams_mentioned.append(f"{hnop} {hnon}")
+        if vng_flag:
+            teams_mentioned.append(f"{vnop} {vnon}")
         teams_mentioned_final = []
         for ent in teams_mentioned:
             if ent not in teams_mentioned_final:
@@ -187,121 +201,107 @@ class ExtractConceptOrder:
 
     def extract_concept_order(self, score_dict, summary_sentences):
         concept_order = []
-        hnon, hnop = score_dict['teams']['home']['next_game']['opponent_name'], score_dict['teams']['home']['next_game']['opponent_place']
-        vnon, vnop = score_dict['teams']['vis']['next_game']['opponent_name'], score_dict['teams']['vis']['next_game']['opponent_place']
-        ng_ents = [hnon, hnop, vnon, vnop, f"{hnop} {hnon}", f"{vnop} {vnon}"]
-
+        all_ents, teams, players = self.ents.get_all_ents(score_dict)
         for sent in list(summary_sentences)[1:]:
-            all_ents, teams, players = self.ents.get_all_ents(score_dict)
             player_ents_unresolved = self.ents.extract_entities(players, sent['coref_sent'])
             team_ents_unresolved = self.ents.extract_entities(teams, sent['coref_sent'])
-            # _unresolved because some extracted entities may be either first or last name, or in case of teams, either just name or place of the team
+            # "_unresolved" because some extracted entities may be either first or last name, or in case of teams, either just name or place of the team
             # we want to make sure that we don't have any duplicates in the list of entities and also entities have full name 
             # (both place & name in case of teams and first & last name in case of players)
             player_ents = self.ents.get_full_player_ents(player_ents_unresolved, score_dict)
             team_ents = self.ents.get_full_team_ents(team_ents_unresolved, score_dict)
 
+            if len(player_ents) == 1 and len(team_ents) == 0:
+                ent_str = f'{player_ents[0]}'
+                if 'B' in sent['content_types'] and 'W' in sent['content_types'] and 'A' in sent['content_types']:
+                    concept_order.append(f'{ent_str}{self.delim}P-B&W&A')
+                elif 'B' in sent['content_types'] and 'W' in sent['content_types']:
+                    concept_order.append(f'{ent_str}{self.delim}P-B&W')
+                elif 'B' in sent['content_types'] and 'A' in sent['content_types']:
+                    concept_order.append(f'{ent_str}{self.delim}P-B&A')
+                elif 'W' in sent['content_types'] and 'A' in sent['content_types']:
+                    concept_order.append(f'{ent_str}{self.delim}P-W&A')
+                elif 'B' in sent['content_types']:
+                    concept_order.append(f'{ent_str}{self.delim}P-B')
+                elif 'W' in sent['content_types']:
+                    concept_order.append(f'{ent_str}{self.delim}P-W')
+                elif 'A' in sent['content_types']:
+                    concept_order.append(f'{ent_str}{self.delim}P-A')
+            
+            if len(team_ents) == 1 and len(player_ents) == 0:
+                ent_str = f'{team_ents[0]}'
+                if 'B' in sent['content_types'] and 'W' in sent['content_types'] and 'A' in sent['content_types']:
+                    concept_order.append(f'{ent_str}{self.delim}T-B&W&A')
+                elif 'B' in sent['content_types'] and 'W' in sent['content_types']:
+                    concept_order.append(f'{ent_str}{self.delim}T-B&W')
+                elif 'B' in sent['content_types'] and 'A' in sent['content_types']:
+                    concept_order.append(f'{ent_str}{self.delim}T-B&A')
+                elif 'W' in sent['content_types'] and 'A' in sent['content_types']:
+                    concept_order.append(f'{ent_str}{self.delim}T-W&A')
+                elif 'B' in sent['content_types']:
+                    concept_order.append(f'{ent_str}{self.delim}T-B')
+                elif 'W' in sent['content_types']:
+                    concept_order.append(f'{ent_str}{self.delim}T-W')
+                elif 'A' in sent['content_types']:
+                    concept_order.append(f'{ent_str}{self.delim}T-A')
 
-            is_ng = False
-            if len(team_ents) > 0:
+            if len(player_ents) > 0 and len(team_ents) > 0:
+                ent_str_list = [player_ents[i] for i in range(len(player_ents))]
                 for te in team_ents:
-                    if te in ng_ents:
-                        is_ng = True
+                    ent_str_list.append(te)
+                ent_str = f'{" & ".join(ent_str_list)}'
+                if 'B' in sent['content_types'] and 'W' in sent['content_types'] and 'A' in sent['content_types']:
+                    concept_order.append(f'{ent_str}{self.delim}P&T-B&W&A')
+                elif 'B' in sent['content_types'] and 'W' in sent['content_types']:
+                    concept_order.append(f'{ent_str}{self.delim}P&T-B&W')
+                elif 'B' in sent['content_types'] and 'A' in sent['content_types']:
+                    concept_order.append(f'{ent_str}{self.delim}P&T-B&A')
+                elif 'W' in sent['content_types'] and 'A' in sent['content_types']:
+                    concept_order.append(f'{ent_str}{self.delim}P&T-W&A')
+                elif 'B' in sent['content_types']:
+                    concept_order.append(f'{ent_str}{self.delim}P&T-B')
+                elif 'W' in sent['content_types']:
+                    concept_order.append(f'{ent_str}{self.delim}P&T-W')
+                elif 'A' in sent['content_types']:
+                    concept_order.append(f'{ent_str}{self.delim}P&T-A')
 
-            # that means this sent is not about next game
-            if not is_ng:
+            if len(player_ents) > 1 and len(team_ents) == 0:
+                ent_str_list = [player_ents[i] for i in range(len(player_ents))]
+                ent_str = f'{" & ".join(ent_str_list)}'
+                # print(f'\n{ent_str}\n{player_ents}')
+                if 'B' in sent['content_types'] and 'W' in sent['content_types'] and 'A' in sent['content_types']:
+                    concept_order.append(f'{ent_str}{self.delim}P&P-B&W&A')
+                elif 'B' in sent['content_types'] and 'W' in sent['content_types']:
+                    concept_order.append(f'{ent_str}{self.delim}P&P-B&W')
+                elif 'B' in sent['content_types'] and 'A' in sent['content_types']:
+                    concept_order.append(f'{ent_str}{self.delim}P&P-B&A')
+                elif 'W' in sent['content_types'] and 'A' in sent['content_types']:
+                    concept_order.append(f'{ent_str}{self.delim}P&P-W&A')
+                elif 'B' in sent['content_types']:
+                    concept_order.append(f'{ent_str}{self.delim}P&P-B')
+                elif 'W' in sent['content_types']:
+                    concept_order.append(f'{ent_str}{self.delim}P&P-W')
+                elif 'A' in sent['content_types']:
+                    concept_order.append(f'{ent_str}{self.delim}P&P-A')
 
-                if len(player_ents) == 1 and len(team_ents) == 0:
-                    ent_str = f'{player_ents[0]}'
-                    if 'B' in sent['content_types'] and 'W' in sent['content_types'] and 'A' in sent['content_types']:
-                        concept_order.append(f'{ent_str}{self.delim}P-B&W&A')
-                    elif 'B' in sent['content_types'] and 'W' in sent['content_types']:
-                        concept_order.append(f'{ent_str}{self.delim}P-B&W')
-                    elif 'B' in sent['content_types'] and 'A' in sent['content_types']:
-                        concept_order.append(f'{ent_str}{self.delim}P-B&A')
-                    elif 'W' in sent['content_types'] and 'A' in sent['content_types']:
-                        concept_order.append(f'{ent_str}{self.delim}P-W&A')
-                    elif 'B' in sent['content_types']:
-                        concept_order.append(f'{ent_str}{self.delim}P-B')
-                    elif 'W' in sent['content_types']:
-                        concept_order.append(f'{ent_str}{self.delim}P-W')
-                    elif 'A' in sent['content_types']:
-                        concept_order.append(f'{ent_str}{self.delim}P-A')
-                
-                if len(team_ents) == 1 and len(player_ents) == 0:
-                    ent_str = f'{team_ents[0]}'
-                    if 'B' in sent['content_types'] and 'W' in sent['content_types'] and 'A' in sent['content_types']:
-                        concept_order.append(f'{ent_str}{self.delim}T-B&W&A')
-                    elif 'B' in sent['content_types'] and 'W' in sent['content_types']:
-                        concept_order.append(f'{ent_str}{self.delim}T-B&W')
-                    elif 'B' in sent['content_types'] and 'A' in sent['content_types']:
-                        concept_order.append(f'{ent_str}{self.delim}T-B&A')
-                    elif 'W' in sent['content_types'] and 'A' in sent['content_types']:
-                        concept_order.append(f'{ent_str}{self.delim}T-W&A')
-                    elif 'B' in sent['content_types']:
-                        concept_order.append(f'{ent_str}{self.delim}T-B')
-                    elif 'W' in sent['content_types']:
-                        concept_order.append(f'{ent_str}{self.delim}T-W')
-                    elif 'A' in sent['content_types']:
-                        concept_order.append(f'{ent_str}{self.delim}T-A')
-
-                if len(player_ents) > 0 and len(team_ents) > 0:
-                    ent_str_list = [player_ents[i] for i in range(len(player_ents))]
-                    for te in team_ents:
-                        ent_str_list.append(te)
-                    ent_str = f'{" & ".join(ent_str_list)}'
-                    if 'B' in sent['content_types'] and 'W' in sent['content_types'] and 'A' in sent['content_types']:
-                        concept_order.append(f'{ent_str}{self.delim}P&T-B&W&A')
-                    elif 'B' in sent['content_types'] and 'W' in sent['content_types']:
-                        concept_order.append(f'{ent_str}{self.delim}P&T-B&W')
-                    elif 'B' in sent['content_types'] and 'A' in sent['content_types']:
-                        concept_order.append(f'{ent_str}{self.delim}P&T-B&A')
-                    elif 'W' in sent['content_types'] and 'A' in sent['content_types']:
-                        concept_order.append(f'{ent_str}{self.delim}P&T-W&A')
-                    elif 'B' in sent['content_types']:
-                        concept_order.append(f'{ent_str}{self.delim}P&T-B')
-                    elif 'W' in sent['content_types']:
-                        concept_order.append(f'{ent_str}{self.delim}P&T-W')
-                    elif 'A' in sent['content_types']:
-                        concept_order.append(f'{ent_str}{self.delim}P&T-A')
-
-                if len(player_ents) > 1 and len(team_ents) == 0:
-                    ent_str_list = [player_ents[i] for i in range(len(player_ents))]
-                    ent_str = f'{" & ".join(ent_str_list)}'
-                    # print(f'\n{ent_str}\n{player_ents}')
-                    if 'B' in sent['content_types'] and 'W' in sent['content_types'] and 'A' in sent['content_types']:
-                        concept_order.append(f'{ent_str}{self.delim}P&P-B&W&A')
-                    elif 'B' in sent['content_types'] and 'W' in sent['content_types']:
-                        concept_order.append(f'{ent_str}{self.delim}P&P-B&W')
-                    elif 'B' in sent['content_types'] and 'A' in sent['content_types']:
-                        concept_order.append(f'{ent_str}{self.delim}P&P-B&A')
-                    elif 'W' in sent['content_types'] and 'A' in sent['content_types']:
-                        concept_order.append(f'{ent_str}{self.delim}P&P-W&A')
-                    elif 'B' in sent['content_types']:
-                        concept_order.append(f'{ent_str}{self.delim}P&P-B')
-                    elif 'W' in sent['content_types']:
-                        concept_order.append(f'{ent_str}{self.delim}P&P-W')
-                    elif 'A' in sent['content_types']:
-                        concept_order.append(f'{ent_str}{self.delim}P&P-A')
-
-                if len(player_ents) == 0 and len(team_ents) > 1:
-                    ent_str_list = [team_ents[i] for i in range(len(team_ents))]
-                    ent_str = f'{" & ".join(ent_str_list)}'
-                    # print(f'\n{ent_str}\n{team_ents}\n')
-                    if 'B' in sent['content_types'] and 'W' in sent['content_types'] and 'A' in sent['content_types']:
-                        concept_order.append(f'{ent_str}{self.delim}T&T-B&W&A')
-                    elif 'B' in sent['content_types'] and 'W' in sent['content_types']:
-                        concept_order.append(f'{ent_str}{self.delim}T&T-B&W')
-                    elif 'B' in sent['content_types'] and 'A' in sent['content_types']:
-                        concept_order.append(f'{ent_str}{self.delim}T&T-B&A')
-                    elif 'W' in sent['content_types'] and 'A' in sent['content_types']:
-                        concept_order.append(f'{ent_str}{self.delim}T&T-W&A')
-                    elif 'B' in sent['content_types']:
-                        concept_order.append(f'{ent_str}{self.delim}T&T-B')
-                    elif 'W' in sent['content_types']:
-                        concept_order.append(f'{ent_str}{self.delim}T&T-W')
-                    elif 'A' in sent['content_types']:
-                        concept_order.append(f'{ent_str}{self.delim}T&T-A')
+            if len(player_ents) == 0 and len(team_ents) > 1:
+                ent_str_list = [team_ents[i] for i in range(len(team_ents))]
+                ent_str = f'{" & ".join(ent_str_list)}'
+                # print(f'\n{ent_str}\n{team_ents}\n')
+                if 'B' in sent['content_types'] and 'W' in sent['content_types'] and 'A' in sent['content_types']:
+                    concept_order.append(f'{ent_str}{self.delim}T&T-B&W&A')
+                elif 'B' in sent['content_types'] and 'W' in sent['content_types']:
+                    concept_order.append(f'{ent_str}{self.delim}T&T-B&W')
+                elif 'B' in sent['content_types'] and 'A' in sent['content_types']:
+                    concept_order.append(f'{ent_str}{self.delim}T&T-B&A')
+                elif 'W' in sent['content_types'] and 'A' in sent['content_types']:
+                    concept_order.append(f'{ent_str}{self.delim}T&T-W&A')
+                elif 'B' in sent['content_types']:
+                    concept_order.append(f'{ent_str}{self.delim}T&T-B')
+                elif 'W' in sent['content_types']:
+                    concept_order.append(f'{ent_str}{self.delim}T&T-W')
+                elif 'A' in sent['content_types']:
+                    concept_order.append(f'{ent_str}{self.delim}T&T-A')
         
         return concept_order
 
@@ -343,8 +343,8 @@ class GetEntityRepresentation:
             player_dict[f"PLAYER-{key}"] = int(player_stats[key])
         return player_dict
 
-    def get_empty_bs_dict(self):
-        bs_dict = {'PLAYER-starter': 0, 'PLAYER-double': 0, 'PLAYER-MIN': 0, 'PLAYER-winner': 0}
+    def get_empty_bs_dict(self, winner=1):
+        bs_dict = {'PLAYER-starter': 0, 'PLAYER-double': 0, 'PLAYER-MIN': 0, 'PLAYER-winner': winner}
         for key in self.bs_keys:
             bs_dict[f"PLAYER-{key}"] = 0
         return bs_dict

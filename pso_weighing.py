@@ -1,8 +1,13 @@
+import random
 import argparse
 import json
 import numpy as np
 import pyswarms as ps
 from sklearn.metrics import log_loss
+
+seed_value = 1234
+random.seed(seed_value)
+np.random.seed(seed_value)
 
 arg_parser = argparse.ArgumentParser()
 arg_parser.add_argument('-ent', '--ent', type=str, default='players', help='entity to rank', choices=['players', 'teams'])
@@ -86,4 +91,4 @@ optimizer = ps.single.GlobalBestPSO(n_particles=100, dimensions=dimensions, opti
 
 # Perform optimization
 cost, pos = optimizer.optimize(f, iters=100)
-np.save(f'ranking_outs/{ent_type}_weights.npy', pos)
+np.save(f'ranking_outs/{ent_type}_weights1.npy', pos)

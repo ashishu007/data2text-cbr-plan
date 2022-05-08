@@ -9,7 +9,7 @@
 		"Jabari Parker|P-B",
 		"Bobby Portis|P-B",
 		"Jabari Parker|P-B",
-		"Chicago Bulls|T-A",
+		"Chicago Bulls & Detroit Pistons|T&T-A",
 		"Philadelphia 76ers|T-A"
 	],
 	[
@@ -26,7 +26,7 @@
 		"Philadelphia 76ers|T-A",
 		"Joel Embiid & Philadelphia 76ers|P&T-B&W",
 		"Robert Covington|P-B&W",
-		"Philadelphia 76ers & Charlotte Hornets|T&T-A",
+		"Philadelphia 76ers & Charlotte Hornets & Miami Heat|T&T-A",
 		"Charlotte Hornets|T-B&A",
 		"Kemba Walker & Charlotte Hornets|P&T-B&W",
 		"Charlotte Hornets|T-B&A",
@@ -120,7 +120,7 @@
 		"Joel Embiid|P-B&W",
 		"J.J. Redick|P-B",
 		"Ben Simmons|P-B&W",
-		"Philadelphia 76ers|T-B&A",
+		"Philadelphia 76ers & Brooklyn Nets|T&T-B&A",
 		"Cleveland Cavaliers|T-A",
 		"Rodney Hood|P-B&W",
 		"Collin Sexton|P-B&W",
@@ -150,7 +150,7 @@
 		"Joel Embiid|P-B&W",
 		"Joel Embiid|P-B&A",
 		"Ben Simmons|P-B",
-		"Philadelphia 76ers|T-A"
+		"Philadelphia 76ers & Brooklyn Nets|T&T-A"
 	],
 	[
 		"Philadelphia 76ers|T-A",
@@ -218,7 +218,7 @@
 		"Philadelphia 76ers|T-A",
 		"Joel Embiid|P-B&W",
 		"Ben Simmons|P-B&W",
-		"Philadelphia 76ers|T-A",
+		"Philadelphia 76ers & Boston Celtics|T&T-A",
 		"Philadelphia 76ers|T-A",
 		"Toronto Raptors|T-A",
 		"OG Anunoby & Philadelphia 76ers|P&T-B&W",
@@ -234,9 +234,14 @@
 		"Dallas Mavericks|T-B&A"
 	],
 	[
+		"Philadelphia 76ers & Philadelphia 76ers|T&T-A",
+		"Landry Shamet & Philadelphia 76ers & Philadelphia 76ers|P&T-B&W",
 		"Joel Embiid|P-B",
+		"Philadelphia 76ers & Philadelphia 76ers|T&T-B",
+		"Washington Wizards & Washington Wizards|T&T-A",
 		"Bradley Beal|P-B&W",
-		"Bradley Beal|P-B"
+		"Bradley Beal|P-B",
+		"Washington Wizards & Washington Wizards|T&T-B&W"
 	],
 	[
 		"Philadelphia 76ers & Atlanta Hawks|T&T-A",
@@ -464,7 +469,7 @@
 		"Joel Embiid & Philadelphia 76ers|P&T-B&W",
 		"Philadelphia 76ers|T-A",
 		"J.J. Redick|P-B",
-		"Philadelphia 76ers|T-A"
+		"Philadelphia 76ers & Brooklyn Nets|T&T-A"
 	],
 	[
 		"Philadelphia 76ers & Chicago Bulls|T&T-W",
@@ -606,7 +611,7 @@
 		"Eric Bledsoe|P-A",
 		"LaMarcus Aldridge|P-B",
 		"Marco Belinelli & Rudy Gay|P&P-W",
-		"Milwaukee Bucks & San Antonio Spurs|T&T-A"
+		"Milwaukee Bucks & San Antonio Spurs & Charlotte Hornets|T&T-A"
 	],
 	[
 		"Milwaukee Bucks|T-A",
@@ -735,7 +740,7 @@
 		"Utah Jazz|T-B",
 		"Rudy Gobert|P-B&W",
 		"Jae Crowder|P-B",
-		"Utah Jazz|T-A"
+		"Utah Jazz & Houston Rockets|T&T-A"
 	],
 	[
 		"Milwaukee Bucks|T-B&A",
@@ -861,7 +866,7 @@
 		"Kentavious Caldwell-Pope|P-B",
 		"Kyle Kuzma & Reggie Bullock|P&P-B",
 		"Rajon Rondo|P-B",
-		"Milwaukee Bucks & Los Angeles Lakers|T&T-A"
+		"Milwaukee Bucks & Los Angeles Lakers & Brooklyn Nets|T&T-A"
 	],
 	[
 		"Milwaukee Bucks|T-B&A",
@@ -910,7 +915,7 @@
 		"Brooklyn Nets|T-B&A",
 		"D'Angelo Russell|P-B&W",
 		"Caris LeVert|P-B&W",
-		"Brooklyn Nets|T-A",
+		"Brooklyn Nets & Indiana Pacers|T&T-A",
 		"Milwaukee Bucks|T-B&A",
 		"Eric Bledsoe & Milwaukee Bucks|P&T-B&W&A",
 		"Eric Bledsoe|P-B",
@@ -957,10 +962,14 @@
 		"Chicago Bulls|T-A"
 	],
 	[
+		"Chicago Bulls & Charlotte Hornets & Charlotte Hornets & Chicago Bulls|T&T-A",
 		"Zach LaVine|P-B&W",
 		"Cameron Payne|P-B",
+		"Chicago Bulls & Chicago Bulls|T&T-B",
+		"Charlotte Hornets & Charlotte Hornets|T&T-A",
 		"Kemba Walker|P-B&W",
-		"Cody Zeller & Nicolas Batum|P&P-B"
+		"Cody Zeller & Nicolas Batum|P&P-B",
+		"Charlotte Hornets & Charlotte Hornets|T&T-B"
 	],
 	[
 		"Golden State Warriors|T-B&W&A",
@@ -1155,7 +1164,7 @@
 		"Chicago Bulls|T-B&A",
 		"Zach LaVine|P-B&W",
 		"Chicago Bulls|T-B&W",
-		"Chicago Bulls & Minnesota Timberwolves|T&T-B&A"
+		"Chicago Bulls & Minnesota Timberwolves & Atlanta Hawks|T&T-B&A"
 	],
 	[
 		"Orlando Magic|T-A",
@@ -1182,7 +1191,7 @@
 		"Kris Dunn|P-B&W",
 		"Kris Dunn|P-A",
 		"Wendell Carter|P-B",
-		"Chicago Bulls|T-A"
+		"Chicago Bulls & Brooklyn Nets|T&T-A"
 	],
 	[
 		"Brooklyn Nets|T-A",
@@ -1235,9 +1244,9 @@
 		"Cleveland Cavaliers|T-A",
 		"Alec Burks & Jordan Clarkson|P&P-B&W",
 		"Alec Burks|P-A",
-		"Cleveland Cavaliers|T-B&A",
+		"Cleveland Cavaliers & Brooklyn Nets|T&T-B&A",
 		"Chicago Bulls|T-B&A",
-		"Chicago Bulls|T-B&A"
+		"Chicago Bulls & Brooklyn Nets|T&T-B&A"
 	],
 	[
 		"Chicago Bulls & New Orleans Pelicans|T&T-B&W",
@@ -1332,14 +1341,17 @@
 		"Philadelphia 76ers|T-B&A"
 	],
 	[
+		"Blake Griffin & Detroit Pistons & Detroit Pistons|P&T-B&W",
 		"Reggie Jackson|P-A",
 		"Reggie Jackson|P-B",
 		"Reggie Jackson|P-B",
 		"Andre Drummond|P-B",
 		"Andre Drummond|P-A",
 		"Andre Drummond|P-B&W",
+		"Zach LaVine & Chicago Bulls & Chicago Bulls|P&T-B&W",
 		"Andre Drummond|P-B",
-		"Otto Porter|P-B"
+		"Otto Porter|P-B",
+		"Chicago Bulls & Chicago Bulls|T&T-B&A"
 	],
 	[
 		"LeBron James|P-B&W",
@@ -1513,7 +1525,7 @@
 		"LeBron James|P-B",
 		"Lonzo Ball & LeBron James|P&P-B&W",
 		"Los Angeles Lakers|T-B&A",
-		"Los Angeles Lakers|T-B&A",
+		"Los Angeles Lakers & Philadelphia 76ers|T&T-B&A",
 		"Cleveland Cavaliers|T-A",
 		"Channing Frye|P-W",
 		"Cedi Osman & Cleveland Cavaliers|P&T-B&W",
@@ -1553,7 +1565,7 @@
 		"Cleveland Cavaliers & Toronto Raptors|T&T-A",
 		"Tristan Thompson|P-B&W",
 		"Cedi Osman & Cleveland Cavaliers|P&T-B",
-		"Cleveland Cavaliers|T-A"
+		"Cleveland Cavaliers & Brooklyn Nets|T&T-A"
 	],
 	[
 		"Cleveland Cavaliers & Golden State Warriors|T&T-B&A",
@@ -1678,7 +1690,7 @@
 		"Kris Dunn|P-B&W",
 		"Cleveland Cavaliers|T-B&A",
 		"Cedi Osman & Cleveland Cavaliers|P&T-B&W",
-		"Cleveland Cavaliers & Chicago Bulls|T&T-B&A"
+		"Cleveland Cavaliers & Chicago Bulls & Atlanta Hawks|T&T-B&A"
 	],
 	[
 		"Miami Heat|T-B&A",
@@ -1698,7 +1710,7 @@
 		"Cedi Osman & Cleveland Cavaliers|P&T-B&W",
 		"Washington Wizards|T-B&W",
 		"Washington Wizards|T-A",
-		"Cleveland Cavaliers|T-B&A"
+		"Cleveland Cavaliers & Indiana Pacers|T&T-B&A"
 	],
 	[
 		"Dallas Mavericks|T-A",
@@ -1707,7 +1719,7 @@
 		"Cleveland Cavaliers|T-B&A",
 		"Harrison Barnes|P-B",
 		"Ryan Broekhoff|P-B&W",
-		"Cleveland Cavaliers|T-A"
+		"Cleveland Cavaliers & Boston Celtics|T&T-A"
 	],
 	[
 		"Boston Celtics|T-B&A",
@@ -1728,7 +1740,7 @@
 		"New York Knicks|T-B",
 		"Lance Thomas|P-W",
 		"Damyean Dotson & New York Knicks|P&T-B&W",
-		"Cleveland Cavaliers|T-B&A"
+		"Cleveland Cavaliers & Brooklyn Nets|T&T-B&A"
 	],
 	[
 		"D'Angelo Russell|P-B&W",
@@ -2001,7 +2013,7 @@
 		"Cleveland Cavaliers|T-B&A",
 		"Cleveland Cavaliers|T-B&A",
 		"Jordan Clarkson|P-B&W",
-		"Cleveland Cavaliers|T-B&A"
+		"Cleveland Cavaliers & Minnesota Timberwolves|T&T-B&A"
 	],
 	[
 		"Boston Celtics|T-A",
@@ -2115,7 +2127,7 @@
 		"Brooklyn Nets|T-B&W",
 		"Kenneth Faried|P-B&W",
 		"Brooklyn Nets|T-B",
-		"Boston Celtics & Brooklyn Nets|T&T-A"
+		"Boston Celtics & Brooklyn Nets & Atlanta Hawks|T&T-A"
 	],
 	[
 		"Boston Celtics|T-A",
@@ -2177,11 +2189,11 @@
 		"Boston Celtics|T-A",
 		"Kevin Durant|P-B&W",
 		"Stephen Curry|P-B",
-		"Golden State Warriors|T-B&A",
+		"Golden State Warriors & Brooklyn Nets|T&T-B&A",
 		"Boston Celtics|T-B&A",
 		"Al Horford|P-B&A",
 		"Kyrie Irving|P-B&W",
-		"Boston Celtics|T-B&W"
+		"Boston Celtics & Brooklyn Nets|T&T-B&W"
 	],
 	[
 		"Boston Celtics|T-B&A",
@@ -2352,8 +2364,19 @@
 		"Boston Celtics|T-B&A"
 	],
 	[
+		"Boston Celtics & Miami Heat & Miami Heat & Boston Celtics|T&T-B&W",
+		"Boston Celtics & Miami Heat & Miami Heat & Boston Celtics|T&T-B&W",
+		"Boston Celtics & Miami Heat & Miami Heat & Boston Celtics|T&T-B&W",
+		"Miami Heat & Miami Heat|T&T-B&W",
+		"Miami Heat & Miami Heat|T&T-B&W",
+		"Miami Heat & Miami Heat|T&T-A",
 		"Al Horford|P-B&W",
-		"Goran Dragi\u0107|P-B&W"
+		"Boston Celtics & Miami Heat & Miami Heat & Boston Celtics|T&T-A",
+		"Boston Celtics & Boston Celtics|T&T-B&A",
+		"Goran Dragi\u0107|P-B&W",
+		"Miami Heat & Miami Heat|T&T-A",
+		"Boston Celtics & Boston Celtics|T&T-B&A",
+		"Boston Celtics & Boston Celtics|T&T-B&A"
 	],
 	[
 		"Orlando Magic|T-W&A",
@@ -2441,7 +2464,7 @@
 	],
 	[
 		"Kevin Durant & Golden State Warriors|P&T-B&W",
-		"Los Angeles Clippers|T-B&A",
+		"Los Angeles Clippers & San Antonio Spurs|T&T-B&A",
 		"Kevin Durant|P-B&W&A",
 		"Kevin Durant|P-A",
 		"Klay Thompson|P-B&W",
@@ -2543,6 +2566,7 @@
 		"Denver Nuggets|T-B&A"
 	],
 	[
+		"Los Angeles Lakers & Los Angeles Lakers|T&T-W&A",
 		"Los Angeles Clippers|T-B&W",
 		"Los Angeles Clippers & Sacramento Kings|T&T-B&W",
 		"Los Angeles Clippers & Sacramento Kings|T&T-B&W",
@@ -2553,7 +2577,7 @@
 		"Sacramento Kings|T-B&A",
 		"Sacramento Kings|T-B&A",
 		"De'Aaron Fox|P-B&W",
-		"Sacramento Kings|T-B&A"
+		"Sacramento Kings & Los Angeles Lakers & Los Angeles Lakers|T&T-B&A"
 	],
 	[
 		"San Antonio Spurs|T-A",
@@ -2602,7 +2626,7 @@
 		"Danilo Gallinari|P-B&W",
 		"Danilo Gallinari|P-A",
 		"Danilo Gallinari & Lou Williams|P&P-B",
-		"Los Angeles Clippers|T-A"
+		"Los Angeles Clippers & New Orleans Pelicans|T&T-A"
 	],
 	[
 		"New Orleans Pelicans|T-B&W",
@@ -2734,7 +2758,7 @@
 		"Lou Williams|P-B&W",
 		"Patrick Beverley|P-B&W",
 		"Los Angeles Clippers|T-B&A",
-		"Los Angeles Clippers|T-B&A",
+		"Los Angeles Clippers & Brooklyn Nets|T&T-B&A",
 		"Zach LaVine & Chicago Bulls|P&T-B&W&A",
 		"Robin Lopez|P-B&A",
 		"Kris Dunn|P-B&W",
@@ -2832,8 +2856,8 @@
 		"Taurean Waller-Prince|P-B&W",
 		"Taurean Waller-Prince & Atlanta Hawks|P&T-B&W",
 		"Atlanta Hawks|T-A",
-		"Memphis Grizzlies|T-A",
-		"Atlanta Hawks|T-A"
+		"Memphis Grizzlies & Cleveland Cavaliers|T&T-A",
+		"Atlanta Hawks & Cleveland Cavaliers|T&T-A"
 	],
 	[
 		"Memphis Grizzlies & Phoenix Suns|T&T-B&W",
@@ -2930,7 +2954,7 @@
 		"Marc Gasol|P-B&W",
 		"Mike Conley & Jaren Jackson|P&P-B",
 		"Memphis Grizzlies & New York Knicks|T&T-B",
-		"New York Knicks|T-B&A"
+		"New York Knicks & Detroit Pistons|T&T-B&A"
 	],
 	[
 		"Toronto Raptors|T-A",
@@ -2992,7 +3016,7 @@
 		"Mike Conley & Memphis Grizzlies|P&T-B&W",
 		"Derrick Jones|P-B",
 		"Garrett Temple & Jaren Jackson|P&P-B",
-		"Memphis Grizzlies|T-A"
+		"Memphis Grizzlies & Houston Rockets & New Orleans Pelicans|T&T-A"
 	],
 	[
 		"Houston Rockets|T-A",
@@ -3049,7 +3073,7 @@
 		"Memphis Grizzlies|T-W",
 		"Marc Gasol|P-B",
 		"Marc Gasol|P-B",
-		"Detroit Pistons|T-A"
+		"Detroit Pistons & Brooklyn Nets|T&T-A"
 	],
 	[
 		"Mike Conley & Memphis Grizzlies|P&T-B&W",
@@ -3293,14 +3317,14 @@
 		"Stephen Curry|P-B&W",
 		"DeMarcus Cousins|P-B&W",
 		"Golden State Warriors|T-B&A",
-		"Golden State Warriors|T-B&A",
+		"Golden State Warriors & Minnesota Timberwolves|T&T-B&A",
 		"Jonas Valan\u010di\u016bnas & Memphis Grizzlies|P&T-B&W",
 		"DeMarcus Cousins|P-B",
 		"Mike Conley|P-B",
 		"Memphis Grizzlies|T-A",
 		"Memphis Grizzlies|T-A",
 		"Chandler Parsons|P-B&W",
-		"Memphis Grizzlies & Golden State Warriors|T&T-B&A"
+		"Memphis Grizzlies & Golden State Warriors & Phoenix Suns|T&T-B&A"
 	],
 	[
 		"Dallas Mavericks|T-A",
@@ -3441,7 +3465,7 @@
 		"John Collins & Atlanta Hawks|P&T-B&W",
 		"John Collins|P-B",
 		"Kent Bazemore|P-B",
-		"Atlanta Hawks|T-B&A"
+		"Atlanta Hawks & Milwaukee Bucks|T&T-B&A"
 	],
 	[
 		"Golden State Warriors|T-B&W&A",
@@ -3522,7 +3546,7 @@
 		"Jordan Clarkson|P-B",
 		"Cleveland Cavaliers|T-B",
 		"Cleveland Cavaliers|T-B",
-		"Atlanta Hawks|T-B&A"
+		"Atlanta Hawks & Indiana Pacers|T&T-B&A"
 	],
 	[
 		"Atlanta Hawks|T-B&A",
@@ -3678,9 +3702,12 @@
 	[
 		"Zach LaVine|P-B&W&A",
 		"Otto Porter|P-B",
+		"Atlanta Hawks & Chicago Bulls & Chicago Bulls & Atlanta Hawks|T&T-B",
+		"Chicago Bulls & Chicago Bulls|T&T-B&W",
 		"Trae Young|P-B&W",
 		"Alex Len|P-B",
-		"Dewayne Dedmon|P-B"
+		"Dewayne Dedmon|P-B",
+		"Atlanta Hawks & Atlanta Hawks|T&T-A"
 	],
 	[
 		"San Antonio Spurs|T-B&W",
@@ -3912,12 +3939,12 @@
 		"Thomas Bryant & Washington Wizards|P&T-W",
 		"Dwight Howard|P-B&W",
 		"John Wall|P-B&W",
-		"Miami Heat & Washington Wizards|T&T-A",
+		"Miami Heat & Washington Wizards & Orlando Magic|T&T-A",
 		"Josh Richardson|P-B&W",
 		"Rodney McGruder|P-B",
 		"Hassan Whiteside|P-B&W",
 		"Miami Heat|T-B",
-		"Miami Heat & Washington Wizards|T&T-A"
+		"Miami Heat & Washington Wizards & Philadelphia 76ers|T&T-A"
 	],
 	[
 		"Philadelphia 76ers|T-A",
@@ -3987,7 +4014,7 @@
 		"Rudy Gobert|P-B",
 		"Rudy Gobert|P-B",
 		"Rudy Gobert|P-B",
-		"Miami Heat & Utah Jazz|T&T-A"
+		"Miami Heat & Utah Jazz & Orlando Magic|T&T-A"
 	],
 	[
 		"Orlando Magic|T-A",
@@ -4032,10 +4059,10 @@
 		"Justise Winslow & Miami Heat|P&T-B&W",
 		"Pascal Siakam|P-B",
 		"Josh Richardson|P-B",
-		"Miami Heat|T-A",
+		"Miami Heat & Orlando Magic|T&T-A",
 		"James Johnson|P-B&W",
 		"James Johnson|P-B",
-		"Miami Heat & Toronto Raptors|T&T-A"
+		"Miami Heat & Toronto Raptors & Orlando Magic|T&T-A"
 	],
 	[
 		"Dwyane Wade & Miami Heat|P&T-A",
@@ -4107,7 +4134,7 @@
 		"Justise Winslow|P-B&W",
 		"Josh Richardson|P-B",
 		"Josh Richardson|P-B",
-		"Miami Heat|T-B&A"
+		"Miami Heat & Milwaukee Bucks|T&T-B&A"
 	],
 	[
 		"Miami Heat & Los Angeles Clippers|T&T-W&A",
@@ -4389,7 +4416,7 @@
 		"Cleveland Cavaliers|T-A",
 		"J.R. Smith|P-B&W",
 		"Cedi Osman & Cleveland Cavaliers|P&T-B",
-		"Charlotte Hornets & Cleveland Cavaliers|T&T-B&A"
+		"Charlotte Hornets & Cleveland Cavaliers & Atlanta Hawks|T&T-B&A"
 	],
 	[
 		"Charlotte Hornets|T-A",
@@ -4555,7 +4582,7 @@
 		"Detroit Pistons|T-B&W",
 		"Blake Griffin & Andre Drummond|P&P-B&W",
 		"Detroit Pistons|T-B",
-		"Charlotte Hornets & Detroit Pistons|T&T-B&A"
+		"Charlotte Hornets & Detroit Pistons & Atlanta Hawks|T&T-B&A"
 	],
 	[
 		"Charlotte Hornets|T-B&W",
@@ -4672,11 +4699,11 @@
 		"Charlotte Hornets|T-A",
 		"Kemba Walker & Charlotte Hornets|P&T-B&W",
 		"Nicolas Batum|P-B",
-		"Charlotte Hornets|T-A",
+		"Charlotte Hornets & Brooklyn Nets|T&T-A",
 		"Washington Wizards|T-B&A",
 		"Bradley Beal|P-B&W",
 		"Bradley Beal|P-B",
-		"Washington Wizards|T-B&A"
+		"Washington Wizards & Brooklyn Nets|T&T-B&A"
 	],
 	[
 		"Brooklyn Nets|T-A",
@@ -4702,7 +4729,7 @@
 		"Kemba Walker|P-B",
 		"Jeremy Lamb|P-B",
 		"Nicolas Batum|P-B",
-		"Charlotte Hornets|T-A"
+		"Charlotte Hornets & Houston Rockets|T&T-A"
 	],
 	[
 		"James Harden & Houston Rockets|P&T-B&W&A",
@@ -4757,7 +4784,7 @@
 		"Jeremy Lamb|P-B&W",
 		"Dwayne Bacon & Michael Kidd-Gilchrist & Michael Kidd-Gilchrist|P&P-B",
 		"Frank Kaminsky|P-B",
-		"Charlotte Hornets & Philadelphia 76ers|T&T-A"
+		"Charlotte Hornets & Philadelphia 76ers & Boston Celtics|T&T-A"
 	],
 	[
 		"Charlotte Hornets & Minnesota Timberwolves|T&T-B&W",
@@ -4839,7 +4866,7 @@
 		"Utah Jazz & Memphis Grizzlies|T&T-B&A",
 		"Mike Conley|P-B&W",
 		"Marc Gasol & Mike Conley|P&P-B&W",
-		"Utah Jazz & Memphis Grizzlies|T&T-B&A"
+		"Utah Jazz & Memphis Grizzlies & Sacramento Kings|T&T-B&A"
 	],
 	[
 		"Memphis Grizzlies|T-A",
@@ -4858,7 +4885,7 @@
 		"Rudy Gobert|P-B&W",
 		"Derrick Favors|P-B&W",
 		"Utah Jazz|T-B",
-		"Utah Jazz & Toronto Raptors|T&T-A"
+		"Utah Jazz & Toronto Raptors & Sacramento Kings|T&T-A"
 	],
 	[
 		"Utah Jazz|T-A",
@@ -4917,7 +4944,7 @@
 		"Utah Jazz & Houston Rockets|T&T-B&W",
 		"Utah Jazz & Houston Rockets|T&T-B",
 		"Rudy Gobert & Utah Jazz|P&T-B&W",
-		"Utah Jazz & Houston Rockets|T&T-B&A"
+		"Utah Jazz & Houston Rockets & Dallas Mavericks|T&T-B&A"
 	],
 	[
 		"Utah Jazz|T-A",
@@ -4956,7 +4983,7 @@
 		"Utah Jazz|T-A",
 		"Rudy Gobert|P-B&W",
 		"Ricky Rubio|P-B",
-		"Utah Jazz & Oklahoma City Thunder|T&T-A"
+		"Utah Jazz & Oklahoma City Thunder & Portland Trail Blazers|T&T-A"
 	],
 	[
 		"Utah Jazz|T-A",
@@ -5091,16 +5118,20 @@
 		"Trey Lyles|P-B&W",
 		"Utah Jazz|T-A",
 		"Denver Nuggets|T-B&A",
-		"Denver Nuggets|T-B&A"
+		"Denver Nuggets & Phoenix Suns|T&T-B&A"
 	],
 	[
+		"Utah Jazz & Minnesota Timberwolves & Minnesota Timberwolves & Utah Jazz|T&T-W&A",
+		"Utah Jazz & Minnesota Timberwolves & Minnesota Timberwolves & Utah Jazz|T&T-B",
 		"Kyle Korver|P-B",
 		"Joe Ingles|P-B",
 		"Joe Ingles|P-B",
+		"Karl-Anthony Towns & Minnesota Timberwolves & Minnesota Timberwolves|P&T-B&W",
 		"Joe Ingles|P-B",
 		"Joe Ingles|P-B",
 		"Jerryd Bayless|P-B",
-		"Gorgui Dieng|P-B"
+		"Gorgui Dieng|P-B",
+		"Utah Jazz & Minnesota Timberwolves & Minnesota Timberwolves & Utah Jazz|T&T-A"
 	],
 	[
 		"Rudy Gobert|P-B&W",
@@ -5111,7 +5142,7 @@
 		"Kyle Korver|P-B&W",
 		"Utah Jazz & Atlanta Hawks|T&T-B",
 		"Trae Young|P-B&W",
-		"Utah Jazz|T-B&A"
+		"Utah Jazz & Houston Rockets|T&T-B&A"
 	],
 	[
 		"Houston Rockets|T-A",
@@ -5199,8 +5230,11 @@
 		"Julius Randle & Jrue Holiday|P&P-B&W",
 		"Anthony Davis|P-B&W",
 		"Anthony Davis|P-B",
+		"Utah Jazz & Utah Jazz|T&T-B",
 		"Jae Crowder|P-B&W",
-		"Joe Ingles|P-B"
+		"Joe Ingles|P-B",
+		"Utah Jazz & Utah Jazz|T&T-B",
+		"Utah Jazz & New Orleans Pelicans & New Orleans Pelicans & Utah Jazz|T&T-A"
 	],
 	[
 		"Oklahoma City Thunder|T-B&W&A",
@@ -5499,9 +5533,15 @@
 		"New Orleans Pelicans|T-B&A"
 	],
 	[
+		"Sacramento Kings & Los Angeles Lakers & Los Angeles Lakers|T&T-B&W&A",
+		"Sacramento Kings & Los Angeles Lakers & Los Angeles Lakers|T&T-B",
+		"Sacramento Kings & Los Angeles Lakers & Los Angeles Lakers|T&T-B",
 		"Bogdan Bogdanovi\u0107 & Bogdan Bogdanovi\u0107|P&P-B&W",
+		"Sacramento Kings & Los Angeles Lakers & Los Angeles Lakers|T&T-B",
+		"Los Angeles Lakers & Los Angeles Lakers|T&T-B",
 		"Kyle Kuzma|P-B&A",
-		"Brandon Ingram|P-B"
+		"Brandon Ingram|P-B",
+		"Los Angeles Lakers & Los Angeles Lakers|T&T-B&A"
 	],
 	[
 		"Portland Trail Blazers|T-B&A",
@@ -5608,7 +5648,7 @@
 		"San Antonio Spurs|T-B&W",
 		"Sacramento Kings|T-B",
 		"Marvin Bagley|P-B&W",
-		"Sacramento Kings|T-B&A"
+		"Sacramento Kings & Houston Rockets|T&T-B&A"
 	],
 	[
 		"Houston Rockets|T-A",
@@ -5703,7 +5743,7 @@
 		"Chicago Bulls|T-B",
 		"Zach LaVine|P-B&W",
 		"Chicago Bulls|T-B&W",
-		"Sacramento Kings & Chicago Bulls|T&T-B&A"
+		"Sacramento Kings & Chicago Bulls & Brooklyn Nets|T&T-B&A"
 	],
 	[
 		"Brooklyn Nets|T-A",
@@ -5776,8 +5816,8 @@
 		"Atlanta Hawks|T-B&W",
 		"Taurean Waller-Prince|P-B&W",
 		"Taurean Waller-Prince & Atlanta Hawks|P&T-B&W",
-		"Atlanta Hawks|T-A",
-		"New York Knicks|T-A"
+		"Atlanta Hawks & Brooklyn Nets|T&T-A",
+		"New York Knicks & Brooklyn Nets|T&T-A"
 	],
 	[
 		"Boston Celtics|T-A",
@@ -5796,7 +5836,7 @@
 		"New York Knicks|T-B&W",
 		"Tim Hardaway|P-B&W",
 		"Damyean Dotson & New York Knicks|P&T-B&W",
-		"New York Knicks & Golden State Warriors|T&T-B&A"
+		"New York Knicks & Golden State Warriors & Brooklyn Nets & Brooklyn Nets|T&T-B&A"
 	],
 	[
 		"New York Knicks|T-B&W",
@@ -5931,17 +5971,20 @@
 		"Luke Kornet|P-B&W"
 	],
 	[
+		"Giannis Antetokounmpo & Milwaukee Bucks & Milwaukee Bucks|P&T-B&W&A",
 		"Brook Lopez|P-B&W",
 		"Brook Lopez|P-A",
 		"Malcolm Brogdon|P-B&W",
 		"Brook Lopez|P-B",
 		"Thon Maker|P-B",
 		"Donte DiVincenzo & Jason Smith|P&P-B&W",
+		"Kevin Knox & New York Knicks & New York Knicks|P&T-B&W",
 		"Thon Maker|P-B",
 		"Kevin Knox|P-B",
 		"Kevin Knox|P-A",
 		"Enes Kanter & Emmanuel Mudiay|P&P-W",
-		"Enes Kanter & Emmanuel Mudiay|P&P-B"
+		"Enes Kanter & Emmanuel Mudiay|P&P-B",
+		"New York Knicks & Milwaukee Bucks & Milwaukee Bucks & New York Knicks|T&T-A"
 	],
 	[
 		"Indiana Pacers|T-B&A",
@@ -6035,8 +6078,16 @@
 		"Damyean Dotson & New York Knicks|P&T-B&W"
 	],
 	[
+		"Detroit Pistons & Detroit Pistons|T&T-A",
+		"Detroit Pistons & Detroit Pistons|T&T-B&A",
+		"Blake Griffin & Detroit Pistons & Detroit Pistons|P&T-B&W",
 		"Reggie Bullock & Reggie Jackson|P&P-B",
-		"Dennis Smith|P-B&W"
+		"Detroit Pistons & Detroit Pistons|T&T-B",
+		"Detroit Pistons & Detroit Pistons|T&T-B&A",
+		"New York Knicks & New York Knicks|T&T-B&A",
+		"Dennis Smith|P-B&W",
+		"New York Knicks & New York Knicks|T&T-B&A",
+		"New York Knicks & New York Knicks|T&T-B&W&A"
 	],
 	[
 		"New York Knicks & Toronto Raptors|T&T-B&W",
@@ -6105,7 +6156,7 @@
 		"New York Knicks|T-B&W",
 		"Allonzo Trier|P-B",
 		"New York Knicks|T-B&W",
-		"New York Knicks & Cleveland Cavaliers|T&T-B&A"
+		"New York Knicks & Cleveland Cavaliers & Detroit Pistons|T&T-B&A"
 	],
 	[
 		"Buddy Hield|P-B&W",
@@ -6164,7 +6215,7 @@
 		"Emmanuel Mudiay|P-B&W",
 		"DeAndre Jordan|P-B&W",
 		"Los Angeles Clippers|T-B&W",
-		"New York Knicks|T-B&A"
+		"New York Knicks & Toronto Raptors|T&T-B&A"
 	],
 	[
 		"Toronto Raptors|T-A",
@@ -6399,9 +6450,12 @@
 	[
 		"LeBron James|P-B&A",
 		"Kyle Kuzma|P-B",
+		"Los Angeles Lakers & San Antonio Spurs & San Antonio Spurs & Los Angeles Lakers|T&T-B",
+		"San Antonio Spurs & San Antonio Spurs|T&T-B",
 		"DeMar DeRozan|P-B&W",
 		"Rudy Gay|P-B",
-		"LaMarcus Aldridge|P-B"
+		"LaMarcus Aldridge|P-B",
+		"San Antonio Spurs & San Antonio Spurs|T&T-A"
 	],
 	[
 		"Kyle Kuzma & Los Angeles Lakers|P&T-B&W&A",
@@ -6438,7 +6492,7 @@
 		"Los Angeles Clippers|T-B&A",
 		"Kyle Kuzma|P-B&W",
 		"Tobias Harris & Shai Gilgeous-Alexander|P&P-B&W",
-		"Los Angeles Lakers & Los Angeles Clippers|T&T-B&A"
+		"Los Angeles Lakers & Los Angeles Clippers & Sacramento Kings|T&T-B&A"
 	],
 	[
 		"Los Angeles Lakers|T-B&W",
@@ -6549,7 +6603,8 @@
 		"Jimmy Butler|P-B",
 		"Jimmy Butler|P-B",
 		"Ben Simmons|P-B",
-		"Furkan Korkmaz & Corey Brewer|P&P-W"
+		"Furkan Korkmaz & Corey Brewer|P&P-W",
+		"Los Angeles Clippers|T-A"
 	],
 	[
 		"LeBron James|P-B&W",
@@ -6683,7 +6738,7 @@
 		"Charlotte Hornets|T-A",
 		"Kemba Walker|P-B&W",
 		"Dwayne Bacon & Kemba Walker & Bismack Biyombo|P&P-B&W",
-		"Charlotte Hornets|T-A"
+		"Charlotte Hornets & New Orleans Pelicans|T&T-A"
 	],
 	[
 		"DeMarcus Cousins|P-B&W",
@@ -6740,7 +6795,7 @@
 		"Terrence Ross|P-B&W",
 		"Orlando Magic|T-B&W",
 		"Aaron Gordon|P-B&W",
-		"Orlando Magic & Charlotte Hornets|T&T-B&A"
+		"Orlando Magic & Charlotte Hornets & Miami Heat|T&T-B&A"
 	],
 	[
 		"Orlando Magic|T-B&W",
@@ -6750,7 +6805,7 @@
 		"Orlando Magic|T-B",
 		"Nikola Vu\u010devi\u0107|P-B&W",
 		"Evan Fournier & Aaron Gordon|P&P-B",
-		"Orlando Magic & Portland Trail Blazers|T&T-B&A"
+		"Orlando Magic & Portland Trail Blazers & Miami Heat|T&T-B&A"
 	],
 	[
 		"Sacramento Kings|T-A",
@@ -6824,7 +6879,7 @@
 		"Nikola Vu\u010devi\u0107|P-B&W",
 		"D.J. Augustin|P-B",
 		"Mohamed Bamba & Jerian Grant|P&P-B",
-		"Orlando Magic|T-A"
+		"Orlando Magic & Miami Heat|T&T-A"
 	],
 	[
 		"Orlando Magic|T-A",
@@ -6966,7 +7021,7 @@
 		"Evan Fournier|P-B",
 		"Jayson Tatum|P-B",
 		"Jaylen Brown|P-B",
-		"Orlando Magic|T-A"
+		"Orlando Magic & Houston Rockets|T&T-A"
 	],
 	[
 		"Orlando Magic|T-A",
@@ -7122,7 +7177,7 @@
 		"Nikola Vu\u010devi\u0107|P-B",
 		"Terrence Ross|P-B",
 		"Orlando Magic|T-A",
-		"New Orleans Pelicans|T-A",
+		"New Orleans Pelicans & Memphis Grizzlies|T&T-A",
 		"Stanley Johnson|P-B&W",
 		"Frank Jackson|P-B",
 		"Ian Clark|P-B",
@@ -7158,7 +7213,7 @@
 		"Tobias Harris|P-A",
 		"Jimmy Butler|P-B",
 		"Jimmy Butler|P-A",
-		"Orlando Magic & Philadelphia 76ers|T&T-A"
+		"Orlando Magic & Philadelphia 76ers & Miami Heat|T&T-A"
 	],
 	[
 		"Orlando Magic & New York Knicks|T&T-B&W",
@@ -7172,7 +7227,7 @@
 		"Emmanuel Mudiay|P-B",
 		"Emmanuel Mudiay|P-B&W",
 		"Mario Hezonja|P-B&W",
-		"New York Knicks|T-A"
+		"New York Knicks & Houston Rockets|T&T-A"
 	],
 	[
 		"Evan Fournier & Terrence Ross|P&P-B&W",
@@ -7280,7 +7335,7 @@
 		"Wesley Matthews|P-B",
 		"Jalen Brunson|P-B&W",
 		"DeAndre Jordan|P-B",
-		"Dallas Mavericks & Boston Celtics|T&T-A"
+		"Dallas Mavericks & Boston Celtics & Houston Rockets|T&T-A"
 	],
 	[
 		"Dallas Mavericks|T-A",
@@ -7296,7 +7351,7 @@
 		"Shai Gilgeous-Alexander|P-A",
 		"Tobias Harris & Avery Bradley|P&P-B",
 		"Avery Bradley|P-B",
-		"Dallas Mavericks & Los Angeles Clippers|T&T-A"
+		"Dallas Mavericks & Los Angeles Clippers & New Orleans Pelicans|T&T-A"
 	],
 	[
 		"Dallas Mavericks|T-A",
@@ -7344,16 +7399,26 @@
 		"Dallas Mavericks|T-B&A"
 	],
 	[
+		"Dallas Mavericks & Dallas Mavericks|T&T-B&A",
 		"Anthony Davis|P-B&W",
 		"Jrue Holiday|P-B",
 		"Julius Randle|P-B",
+		"New Orleans Pelicans & New Orleans Pelicans|T&T-B&A",
+		"Dallas Mavericks & Dallas Mavericks|T&T-B&A",
 		"DeAndre Jordan|P-B",
-		"Harrison Barnes|P-B"
+		"Harrison Barnes|P-B",
+		"Dallas Mavericks & Dallas Mavericks|T&T-B&A"
 	],
 	[
+		"Dallas Mavericks & Dallas Mavericks|T&T-B&A",
+		"Dallas Mavericks & Dallas Mavericks|T&T-B&A",
 		"DeAndre Jordan|P-B&W",
+		"Dallas Mavericks & Dallas Mavericks|T&T-B&A",
+		"Oklahoma City Thunder & Oklahoma City Thunder|T&T-B&A",
 		"Paul George|P-B&W",
-		"Dennis Schr\u00f6der|P-B"
+		"Dennis Schr\u00f6der|P-B",
+		"Oklahoma City Thunder & Oklahoma City Thunder|T&T-B&A",
+		"Dallas Mavericks & Dallas Mavericks|T&T-B&A"
 	],
 	[
 		"Los Angeles Lakers|T-B&W&A",
@@ -7458,7 +7523,7 @@
 		"Dallas Mavericks|T-B&W",
 		"Justin Jackson|P-B",
 		"Luka Don\u010di\u0107|P-B&W",
-		"Dallas Mavericks|T-A"
+		"Dallas Mavericks & Houston Rockets|T&T-A"
 	],
 	[
 		"Miami Heat|T-A",
@@ -7548,7 +7613,7 @@
 		"Justin Jackson|P-B&W",
 		"Salah Mejri|P-B&W",
 		"Salah Mejri|P-B",
-		"Dallas Mavericks|T-A"
+		"Dallas Mavericks & Minnesota Timberwolves|T&T-A"
 	],
 	[
 		"Minnesota Timberwolves|T-B&A",
@@ -7561,8 +7626,19 @@
 		"Dallas Mavericks & Minnesota Timberwolves|T&T-A"
 	],
 	[
+		"Memphis Grizzlies & Memphis Grizzlies|T&T-B&W&A",
+		"Dallas Mavericks & Memphis Grizzlies & Memphis Grizzlies & Dallas Mavericks|T&T-B&W",
+		"Dallas Mavericks & Memphis Grizzlies & Memphis Grizzlies & Dallas Mavericks|T&T-B&W",
+		"Dallas Mavericks & Memphis Grizzlies & Memphis Grizzlies & Dallas Mavericks|T&T-B&W",
+		"Memphis Grizzlies & Memphis Grizzlies|T&T-B&W",
+		"Memphis Grizzlies & Memphis Grizzlies|T&T-B&A",
+		"Memphis Grizzlies & Memphis Grizzlies|T&T-B&W",
 		"Justin Holiday|P-B&W",
-		"Courtney Lee|P-B&W"
+		"Memphis Grizzlies & Memphis Grizzlies|T&T-A",
+		"Dallas Mavericks & Dallas Mavericks|T&T-B&A",
+		"Courtney Lee|P-B&W",
+		"Justin Jackson & Memphis Grizzlies & Memphis Grizzlies|P&T-B&W",
+		"Memphis Grizzlies & Memphis Grizzlies|T&T-A"
 	],
 	[
 		"Dallas Mavericks|T-A",
@@ -7697,7 +7773,7 @@
 		"Mike Conley & Memphis Grizzlies|P&T-B&W",
 		"Jaren Jackson|P-B",
 		"Jaren Jackson|P-B&W",
-		"Brooklyn Nets & Memphis Grizzlies|T&T-A",
+		"Brooklyn Nets & Memphis Grizzlies & Philadelphia 76ers|T&T-A",
 		"Marc Gasol|P-B&W",
 		"Marc Gasol|P-A",
 		"Garrett Temple|P-B&W",
@@ -7755,7 +7831,7 @@
 		"John Wall|P-B",
 		"Bradley Beal|P-A",
 		"Markieff Morris|P-B",
-		"Washington Wizards|T-A"
+		"Washington Wizards & Atlanta Hawks|T&T-A"
 	],
 	[
 		"Brooklyn Nets|T-B&A",
@@ -7805,9 +7881,13 @@
 		"Brooklyn Nets|T-B&A"
 	],
 	[
+		"Brooklyn Nets & Brooklyn Nets|T&T-A",
 		"Spencer Dinwiddie|P-B&W",
 		"Rondae Hollis-Jefferson & D'Angelo Russell|P&P-B&W",
-		"Kemba Walker|P-B&W"
+		"Brooklyn Nets & Brooklyn Nets|T&T-B",
+		"Charlotte Hornets & Charlotte Hornets|T&T-B&A",
+		"Kemba Walker|P-B&W",
+		"Jeremy Lamb & Charlotte Hornets & Charlotte Hornets|P&T-B&W"
 	],
 	[
 		"Brooklyn Nets|T-A",
@@ -7829,8 +7909,8 @@
 		"Joe Harris & D'Angelo Russell|P&P-B",
 		"Shabazz Napier|P-B",
 		"Atlanta Hawks|T-B",
-		"Atlanta Hawks|T-A",
-		"Atlanta Hawks|T-A"
+		"Atlanta Hawks & Toronto Raptors|T&T-A",
+		"Atlanta Hawks & Toronto Raptors|T&T-A"
 	],
 	[
 		"Brooklyn Nets & Boston Celtics|T&T-B&W",
@@ -7871,7 +7951,7 @@
 		"Trey Burke & Noah Vonleh|P&P-B&A",
 		"New York Knicks|T-A",
 		"Brooklyn Nets|T-B&A",
-		"Brooklyn Nets|T-A"
+		"Brooklyn Nets & Boston Celtics|T&T-A"
 	],
 	[
 		"D'Angelo Russell|P-B&W",
@@ -8003,7 +8083,7 @@
 		"Kevin Love & Cleveland Cavaliers|P&T-B&W",
 		"David Nwaba|P-B&W",
 		"Larry Nance|P-B&W",
-		"Cleveland Cavaliers|T-A"
+		"Cleveland Cavaliers & Atlanta Hawks & Miami Heat|T&T-A"
 	],
 	[
 		"Brooklyn Nets|T-B&W&A",
@@ -8032,7 +8112,7 @@
 		"Boston Celtics|T-B&A",
 		"Boston Celtics|T-A",
 		"Boston Celtics|T-A",
-		"Boston Celtics|T-A",
+		"Boston Celtics & Miami Heat|T&T-A",
 		"Boston Celtics|T-B&W",
 		"Gordon Hayward|P-B&W",
 		"Gordon Hayward|P-B",
@@ -8105,7 +8185,7 @@
 		"Denver Nuggets & Sacramento Kings|T&T-B",
 		"Sacramento Kings|T-B&W",
 		"Justin Jackson|P-B&W",
-		"Sacramento Kings|T-A"
+		"Sacramento Kings & Los Angeles Lakers|T&T-A"
 	],
 	[
 		"Denver Nuggets & New Orleans Pelicans|T&T-B&W",
@@ -8115,7 +8195,7 @@
 		"Denver Nuggets|T-B",
 		"Jamal Murray & Gary Harris|P&P-B",
 		"Nikola Joki\u0107|P-B",
-		"Denver Nuggets|T-B&A"
+		"Denver Nuggets & Golden State Warriors|T&T-B&A"
 	],
 	[
 		"Denver Nuggets|T-A",
@@ -8174,7 +8254,7 @@
 		"James Harden|P-B",
 		"Chris Paul|P-B",
 		"Houston Rockets|T-B",
-		"Denver Nuggets|T-A"
+		"Denver Nuggets & Golden State Warriors|T&T-A"
 	],
 	[
 		"Denver Nuggets|T-A",
@@ -8345,7 +8425,7 @@
 		"Cleveland Cavaliers|T-W&A",
 		"Jamal Murray|P-B&W",
 		"Nikola Joki\u0107|P-B&W",
-		"Denver Nuggets|T-A",
+		"Denver Nuggets & Utah Jazz|T&T-A",
 		"Cleveland Cavaliers|T-W&A",
 		"Ante \u017di\u017ei\u0107|P-B&W",
 		"Cleveland Cavaliers|T-A"
@@ -8454,7 +8534,7 @@
 		"Denver Nuggets|T-B&W",
 		"Nikola Joki\u0107|P-B&W",
 		"Denver Nuggets|T-B",
-		"Denver Nuggets & New Orleans Pelicans|T&T-B&A"
+		"Denver Nuggets & New Orleans Pelicans & Utah Jazz|T&T-B&A"
 	],
 	[
 		"Denver Nuggets|T-W&A",
@@ -8526,7 +8606,10 @@
 		"San Antonio Spurs|T-B&A"
 	],
 	[
+		"Paul Millsap & Denver Nuggets & Denver Nuggets|P&T-B&W&A",
 		"Jamal Murray & Nikola Joki\u0107|P&P-B",
+		"Denver Nuggets & Denver Nuggets|T&T-B",
+		"Denver Nuggets & Portland Trail Blazers & Portland Trail Blazers & Denver Nuggets|T&T-A",
 		"Enes Kanter|P-B&W",
 		"Al-Farouq Aminu|P-B&W"
 	],
@@ -8564,7 +8647,7 @@
 		"Victor Oladipo|P-B&W",
 		"Kyle O'Quinn|P-B",
 		"Indiana Pacers|T-B",
-		"Brooklyn Nets|T-A",
+		"Brooklyn Nets & Cleveland Cavaliers|T&T-A",
 		"Joe Harris|P-B&W",
 		"D'Angelo Russell|P-B",
 		"Brooklyn Nets|T-A",
@@ -8854,7 +8937,7 @@
 	[
 		"Indiana Pacers|T-A",
 		"Bojan Bogdanovi\u0107|P-B&W",
-		"Indiana Pacers|T-B&A",
+		"Indiana Pacers & Boston Celtics|T&T-B&A",
 		"Indiana Pacers|T-B&A",
 		"Los Angeles Clippers|T-B&A",
 		"Montrezl Harrell|P-B&W",
@@ -9020,13 +9103,21 @@
 		"Orlando Magic|T-A"
 	],
 	[
+		"Indiana Pacers & Indiana Pacers|T&T-W&A",
+		"Indiana Pacers & Detroit Pistons & Detroit Pistons & Indiana Pacers|T&T-B&W",
+		"Indiana Pacers & Detroit Pistons & Detroit Pistons & Indiana Pacers|T&T-B&W",
+		"Indiana Pacers & Indiana Pacers|T&T-B&W",
+		"Indiana Pacers & Indiana Pacers|T&T-A",
 		"Wayne Ellington|P-B&W",
 		"Wayne Ellington|P-B&W",
 		"Andre Drummond|P-B&W",
+		"Indiana Pacers & Detroit Pistons & Detroit Pistons & Indiana Pacers|T&T-A",
+		"Indiana Pacers & Indiana Pacers|T&T-A",
 		"Bojan Bogdanovi\u0107|P-B&W",
 		"Domantas Sabonis|P-B&W",
 		"Myles Turner|P-B&W",
-		"Myles Turner|P-B&W"
+		"Myles Turner|P-B&W",
+		"Indiana Pacers & Indiana Pacers|T&T-A"
 	],
 	[
 		"Indiana Pacers & Boston Celtics|T&T-B&W",
@@ -9040,7 +9131,7 @@
 		"Myles Turner|P-B&W",
 		"Myles Turner|P-B&W",
 		"Myles Turner|P-B",
-		"Indiana Pacers & Boston Celtics|T&T-A"
+		"Indiana Pacers & Boston Celtics & Orlando Magic|T&T-A"
 	],
 	[
 		"D'Angelo Russell & Brooklyn Nets|P&T-B&W",
@@ -9049,7 +9140,7 @@
 		"Joe Harris|P-B",
 		"Caris LeVert|P-B",
 		"Spencer Dinwiddie|P-B",
-		"Indiana Pacers & Brooklyn Nets|T&T-A",
+		"Indiana Pacers & Brooklyn Nets & Miami Heat|T&T-A",
 		"Indiana Pacers & Brooklyn Nets|T&T-B&A"
 	],
 	[
@@ -9568,13 +9659,19 @@
 		"Cleveland Cavaliers|T-A",
 		"Kyle Korver & Cleveland Cavaliers|P&T-B&W",
 		"Jordan Clarkson|P-B&W",
-		"Cleveland Cavaliers|T-A"
+		"Cleveland Cavaliers & Indiana Pacers|T&T-A"
 	],
 	[
+		"Detroit Pistons & Boston Celtics & Boston Celtics & Detroit Pistons|T&T-B&W",
+		"Boston Celtics & Boston Celtics|T&T-B&W",
+		"Detroit Pistons & Boston Celtics & Boston Celtics & Detroit Pistons|T&T-B",
 		"Andre Drummond|P-B&W",
 		"Stanley Johnson|P-B",
+		"Detroit Pistons & Detroit Pistons|T&T-B",
+		"Boston Celtics & Boston Celtics|T&T-B",
 		"Jaylen Brown|P-B&W",
-		"Daniel Theis & Gordon Hayward|P&P-B"
+		"Daniel Theis & Gordon Hayward|P&P-B",
+		"Detroit Pistons & Boston Celtics & Boston Celtics & Detroit Pistons|T&T-B&A"
 	],
 	[
 		"Detroit Pistons & Miami Heat|T&T-B&W",
@@ -9687,8 +9784,10 @@
 		"Jimmy Butler & Philadelphia 76ers|P&T-B&W",
 		"Ben Simmons|P-B",
 		"Philadelphia 76ers|T-A",
+		"Detroit Pistons & Detroit Pistons|T&T-A",
 		"Blake Griffin & Andre Drummond|P&P-B&W",
-		"Langston Galloway|P-B"
+		"Langston Galloway|P-B",
+		"Detroit Pistons & Philadelphia 76ers & Detroit Pistons|T&T-B&A"
 	],
 	[
 		"Jrue Holiday|P-B&A",
@@ -9743,7 +9842,7 @@
 		"Alex Len|P-B",
 		"Kent Bazemore|P-B",
 		"Trae Young|P-B",
-		"Detroit Pistons & Atlanta Hawks|T&T-B&A"
+		"Detroit Pistons & Atlanta Hawks & Indiana Pacers|T&T-B&A"
 	],
 	[
 		"Detroit Pistons|T-A",
@@ -9860,7 +9959,7 @@
 		"Detroit Pistons|T-B&W",
 		"Denver Nuggets|T-B&W",
 		"Andre Drummond|P-B&W",
-		"Detroit Pistons|T-B&A",
+		"Detroit Pistons & New York Knicks|T&T-B&A",
 		"Denver Nuggets|T-W&A",
 		"Paul Millsap & Denver Nuggets|P&T-W",
 		"Trey Lyles|P-B&W",
@@ -10002,7 +10101,8 @@
 		"Detroit Pistons|T-B&W",
 		"Portland Trail Blazers|T-A",
 		"Damian Lillard|P-B&W",
-		"Evan Turner|P-B&W&A"
+		"Evan Turner|P-B&W&A",
+		"Indiana Pacers|T-A"
 	],
 	[
 		"Detroit Pistons & Indiana Pacers|T&T-B&W",
@@ -10082,7 +10182,7 @@
 		"Toronto Raptors & Minnesota Timberwolves|T&T-A",
 		"Jimmy Butler|P-B&W",
 		"Minnesota Timberwolves|T-B&W",
-		"Toronto Raptors & Minnesota Timberwolves|T&T-B&A"
+		"Toronto Raptors & Minnesota Timberwolves & Milwaukee Bucks|T&T-B&A"
 	],
 	[
 		"Toronto Raptors|T-A",
@@ -10110,7 +10210,7 @@
 		"Pascal Siakam|P-B&W",
 		"Jonas Valan\u010di\u016bnas|P-B&W",
 		"Toronto Raptors|T-B",
-		"Toronto Raptors|T-B&A",
+		"Toronto Raptors & Orlando Magic|T&T-B&A",
 		"Tim Hardaway|P-B&W",
 		"Tim Hardaway|P-B&W",
 		"Damyean Dotson & New York Knicks|P&T-B&W",
@@ -10139,7 +10239,7 @@
 		"Pascal Siakam|P-B",
 		"OG Anunoby & Pascal Siakam|P&P-B&W",
 		"Pascal Siakam|P-A",
-		"Toronto Raptors & Detroit Pistons|T&T-A"
+		"Toronto Raptors & Detroit Pistons & Cleveland Cavaliers|T&T-A"
 	],
 	[
 		"Toronto Raptors|T-A",
@@ -10173,7 +10273,7 @@
 		"Kevin Durant|P-B&W",
 		"Kevin Durant|P-A",
 		"Klay Thompson|P-B",
-		"Golden State Warriors|T-A"
+		"Golden State Warriors & Cleveland Cavaliers|T&T-A"
 	],
 	[
 		"Denver Nuggets|T-A",
@@ -10257,7 +10357,7 @@
 		"Jae Crowder & Utah Jazz|P&T-B&W",
 		"Fred VanVleet|P-A",
 		"Joe Ingles|P-B",
-		"Utah Jazz|T-A"
+		"Utah Jazz & Cleveland Cavaliers|T&T-A"
 	],
 	[
 		"Toronto Raptors & Indiana Pacers|T&T-B&W",
@@ -10269,7 +10369,7 @@
 		"Pascal Siakam|P-B",
 		"Pascal Siakam|P-A",
 		"Fred VanVleet & Pascal Siakam|P&P-B",
-		"Toronto Raptors & Indiana Pacers|T&T-A",
+		"Toronto Raptors & Indiana Pacers & Atlanta Hawks & Cleveland Cavaliers|T&T-A",
 		"Indiana Pacers|T-A"
 	],
 	[
@@ -10318,7 +10418,7 @@
 		"Memphis Grizzlies|T-B&W",
 		"Pascal Siakam|P-A",
 		"Jaren Jackson|P-B",
-		"Memphis Grizzlies|T-A"
+		"Memphis Grizzlies & New Orleans Pelicans|T&T-A"
 	],
 	[
 		"Toronto Raptors|T-B&A",
@@ -10389,7 +10489,7 @@
 		"Orlando Magic|T-A",
 		"Terrence Ross|P-B&W",
 		"Nikola Vu\u010devi\u0107|P-B",
-		"Toronto Raptors & Orlando Magic|T&T-A",
+		"Toronto Raptors & Orlando Magic & Boston Celtics|T&T-A",
 		"Toronto Raptors|T-A",
 		"OG Anunoby & Toronto Raptors|P&T-B&W",
 		"OG Anunoby|P-B&W",
@@ -10546,7 +10646,7 @@
 		"Chris Paul|P-A",
 		"Clint Capela|P-B&W",
 		"Clint Capela & Chris Paul|P&P-A",
-		"Houston Rockets|T-A"
+		"Houston Rockets & New Orleans Pelicans|T&T-A"
 	],
 	[
 		"Houston Rockets|T-A",
@@ -10561,7 +10661,7 @@
 		"Victor Oladipo|P-B&W",
 		"Victor Oladipo|P-B",
 		"Bojan Bogdanovi\u0107|P-B",
-		"Indiana Pacers|T-B&A"
+		"Indiana Pacers & Miami Heat|T&T-B&A"
 	],
 	[
 		"Houston Rockets & Golden State Warriors|T&T-B&W",
@@ -10586,8 +10686,14 @@
 		"Houston Rockets & Sacramento Kings|T&T-B&A"
 	],
 	[
+		"Houston Rockets & Houston Rockets|T&T-A",
 		"James Harden|P-B&A",
-		"Clint Capela|P-B&W"
+		"Clint Capela|P-B&W",
+		"Houston Rockets & Houston Rockets|T&T-B&A",
+		"Detroit Pistons & Detroit Pistons|T&T-A",
+		"Blake Griffin & Detroit Pistons & Detroit Pistons|P&T-B&W",
+		"Detroit Pistons & Detroit Pistons|T&T-B",
+		"Detroit Pistons & Detroit Pistons|T&T-A"
 	],
 	[
 		"Dallas Mavericks|T-A",
@@ -10754,12 +10860,12 @@
 		"James Harden|P-B",
 		"James Harden|P-B&A",
 		"Brandon Knight|P-W",
-		"Houston Rockets|T-B&A",
+		"Houston Rockets & Brooklyn Nets|T&T-B&A",
 		"Memphis Grizzlies|T-B&A",
 		"Mike Conley & Memphis Grizzlies|P&T-B&W",
 		"Marc Gasol|P-B",
 		"Marc Gasol|P-B&W",
-		"Houston Rockets & Memphis Grizzlies|T&T-B&A"
+		"Houston Rockets & Memphis Grizzlies & Milwaukee Bucks|T&T-B&A"
 	],
 	[
 		"Brooklyn Nets|T-B&W",
@@ -10800,7 +10906,7 @@
 		"Serge Ibaka|P-B&W",
 		"Serge Ibaka|P-A",
 		"Serge Ibaka|P-B&W",
-		"Houston Rockets & Toronto Raptors|T&T-A"
+		"Houston Rockets & Toronto Raptors & Dallas Mavericks|T&T-A"
 	],
 	[
 		"Houston Rockets|T-A",
@@ -10809,7 +10915,7 @@
 		"James Harden|P-A",
 		"Kenneth Faried|P-B&W",
 		"Houston Rockets|T-A",
-		"Orlando Magic|T-A"
+		"Orlando Magic & New Orleans Pelicans|T&T-A"
 	],
 	[
 		"Houston Rockets & New Orleans Pelicans|T&T-B&W",
@@ -10963,7 +11069,8 @@
 		"Chris Paul|P-B&W",
 		"Eric Gordon|P-B",
 		"Eric Gordon|P-B",
-		"Austin Rivers & Kenneth Faried|P&P-B&W"
+		"Austin Rivers & Kenneth Faried|P&P-B&W",
+		"Houston Rockets & Sacramento Kings & Sacramento Kings|T&T-A"
 	],
 	[
 		"James Harden|P-B&W",
@@ -11014,7 +11121,7 @@
 	[
 		"LeBron James|P-B&W",
 		"LeBron James|P-A",
-		"Los Angeles Lakers|T-A",
+		"Los Angeles Lakers & Dallas Mavericks|T&T-A",
 		"San Antonio Spurs|T-B&A",
 		"DeMar DeRozan|P-B&W",
 		"Pau Gasol|P-B&W",
@@ -11044,7 +11151,7 @@
 		"Orlando Magic|T-A",
 		"Aaron Gordon|P-B&W",
 		"Jerian Grant|P-B&W",
-		"San Antonio Spurs & Orlando Magic|T&T-B&A",
+		"San Antonio Spurs & Orlando Magic & Miami Heat|T&T-B&A",
 		"San Antonio Spurs|T-A",
 		"DeMar DeRozan|P-B&W",
 		"Pau Gasol|P-B",
@@ -11177,8 +11284,12 @@
 		"San Antonio Spurs|T-B"
 	],
 	[
+		"DeMar DeRozan & San Antonio Spurs & San Antonio Spurs|P&T-B&W&A",
 		"LaMarcus Aldridge|P-B",
-		"Nikola Joki\u0107|P-B&W"
+		"San Antonio Spurs & San Antonio Spurs|T&T-B",
+		"Denver Nuggets & Denver Nuggets|T&T-B&A",
+		"Nikola Joki\u0107|P-B&W",
+		"Denver Nuggets & Denver Nuggets|T&T-B&A"
 	],
 	[
 		"DeMar DeRozan & San Antonio Spurs|P&T-B&W",
@@ -11212,13 +11323,16 @@
 		"San Antonio Spurs|T-B&A"
 	],
 	[
+		"LaMarcus Aldridge & San Antonio Spurs & San Antonio Spurs|P&T-B&W&A",
 		"Derrick White|P-B",
 		"Marco Belinelli|P-B",
 		"DeMar DeRozan|P-B",
 		"Bryn Forbes & Patty Mills|P&P-B",
+		"Paul George & Oklahoma City Thunder & Oklahoma City Thunder|P&T-B",
 		"Steven Adams|P-B",
 		"Steven Adams|P-B",
-		"Steven Adams|P-B"
+		"Steven Adams|P-B",
+		"San Antonio Spurs & San Antonio Spurs|T&T-A"
 	],
 	[
 		"San Antonio Spurs & Charlotte Hornets|T&T-B&W",
@@ -11547,7 +11661,7 @@
 		"Phoenix Suns|T-A",
 		"Phoenix Suns|T-A",
 		"T.J. Warren & Phoenix Suns|P&T-B&W",
-		"Phoenix Suns & Oklahoma City Thunder|T&T-B&A"
+		"Phoenix Suns & Oklahoma City Thunder & Sacramento Kings|T&T-B&A"
 	],
 	[
 		"Indiana Pacers|T-B&A",
@@ -11656,7 +11770,7 @@
 		"Devin Booker|P-B",
 		"T.J. Warren|P-B",
 		"Devin Booker|P-B",
-		"Phoenix Suns|T-A"
+		"Phoenix Suns & Houston Rockets|T&T-A"
 	],
 	[
 		"Philadelphia 76ers|T-A",
@@ -11801,7 +11915,7 @@
 		"Phoenix Suns|T-B&W",
 		"Los Angeles Lakers|T-A",
 		"Devin Booker|P-B&W",
-		"Phoenix Suns|T-A",
+		"Phoenix Suns & Los Angeles Clippers|T&T-A",
 		"Los Angeles Lakers|T-A",
 		"LeBron James|P-B&W",
 		"Brandon Ingram|P-B&W",
@@ -11885,7 +11999,7 @@
 		"Memphis Grizzlies|T-B&A",
 		"Phoenix Suns & Memphis Grizzlies|T&T-B&A",
 		"Devin Booker|P-B&W",
-		"Phoenix Suns|T-B&A"
+		"Phoenix Suns & Los Angeles Clippers|T&T-B&A"
 	],
 	[
 		"Phoenix Suns & Cleveland Cavaliers|T&T-B&W",
@@ -11923,7 +12037,7 @@
 		"New Orleans Pelicans|T-B&W",
 		"Julius Randle|P-B",
 		"Elfrid Payton|P-B",
-		"Phoenix Suns & New Orleans Pelicans|T&T-B&A"
+		"Phoenix Suns & New Orleans Pelicans & Houston Rockets|T&T-B&A"
 	],
 	[
 		"Iman Shumpert|P-B&W",
@@ -11932,14 +12046,14 @@
 		"Paul George|P-B",
 		"Dennis Schr\u00f6der|P-B&W",
 		"Steven Adams|P-W",
-		"Oklahoma City Thunder|T-A"
+		"Oklahoma City Thunder & Denver Nuggets|T&T-A"
 	],
 	[
 		"Oklahoma City Thunder & Boston Celtics|T&T-B&W",
 		"Boston Celtics|T-B&W",
 		"Russell Westbrook|P-B&W",
 		"Russell Westbrook|P-A",
-		"Oklahoma City Thunder|T-A",
+		"Oklahoma City Thunder & Detroit Pistons|T&T-A",
 		"Boston Celtics|T-B&A",
 		"Jayson Tatum & Boston Celtics|P&T-B&W",
 		"Robert Williams|P-B&A",
@@ -12243,11 +12357,11 @@
 		"Oklahoma City Thunder|T-W",
 		"Oklahoma City Thunder & Philadelphia 76ers|T&T-B&W",
 		"Tobias Harris & Ben Simmons|P&P-B&W",
-		"Philadelphia 76ers|T-B&A",
+		"Philadelphia 76ers & San Antonio Spurs|T&T-B&A",
 		"Oklahoma City Thunder|T-A",
 		"Russell Westbrook|P-B&A",
 		"Dennis Schr\u00f6der|P-B",
-		"Oklahoma City Thunder & Philadelphia 76ers|T&T-B&A"
+		"Oklahoma City Thunder & Philadelphia 76ers & Golden State Warriors|T&T-B&A"
 	],
 	[
 		"Paul George|P-A",
@@ -12272,7 +12386,7 @@
 		"Brooklyn Nets|T-B&A",
 		"Spencer Dinwiddie|P-B&W",
 		"D'Angelo Russell|P-B&W",
-		"Brooklyn Nets|T-A"
+		"Brooklyn Nets & Indiana Pacers|T&T-A"
 	],
 	[
 		"Oklahoma City Thunder & Golden State Warriors|T&T-B&W",
@@ -12302,7 +12416,14 @@
 		"Miami Heat|T-B&A"
 	],
 	[
-		"Fred VanVleet & Kawhi Leonard|P&P-B"
+		"Toronto Raptors & Toronto Raptors|T&T-A",
+		"Pascal Siakam & Toronto Raptors & Toronto Raptors|P&T-B&W",
+		"Fred VanVleet & Kawhi Leonard|P&P-B",
+		"Toronto Raptors & Toronto Raptors|T&T-B",
+		"Oklahoma City Thunder & Oklahoma City Thunder|T&T-B&A",
+		"Russell Westbrook & Oklahoma City Thunder & Oklahoma City Thunder|P&T-B&W",
+		"Steven Adams & Oklahoma City Thunder & Oklahoma City Thunder|P&T-B&W",
+		"Steven Adams & Toronto Raptors & Toronto Raptors|P&T-B&W"
 	],
 	[
 		"Oklahoma City Thunder & Indiana Pacers|T&T-B&W",
@@ -12635,10 +12756,14 @@
 		"Minnesota Timberwolves & San Antonio Spurs|T&T-B&A"
 	],
 	[
+		"Minnesota Timberwolves & Minnesota Timberwolves|T&T-A",
 		"Derrick Rose|P-B&W",
 		"Karl-Anthony Towns|P-B&W",
+		"Minnesota Timberwolves & Minnesota Timberwolves|T&T-B",
+		"Phoenix Suns & Phoenix Suns|T&T-B",
 		"Devin Booker|P-B",
-		"T.J. Warren|P-B"
+		"T.J. Warren|P-B",
+		"Phoenix Suns & Phoenix Suns|T&T-A"
 	],
 	[
 		"Utah Jazz|T-B&W&A",
@@ -12846,7 +12971,7 @@
 		"Damian Lillard|P-B&A",
 		"CJ McCollum|P-B",
 		"Jusuf Nurki\u0107|P-B",
-		"Portland Trail Blazers|T-A",
+		"Portland Trail Blazers & Los Angeles Lakers|T&T-A",
 		"Portland Trail Blazers & San Antonio Spurs|T&T-A",
 		"DeMar DeRozan|P-B&W",
 		"Bryn Forbes|P-B",
@@ -13192,7 +13317,7 @@
 		"Portland Trail Blazers|T-A",
 		"Damian Lillard|P-B&W",
 		"Damian Lillard|P-A",
-		"Portland Trail Blazers & Golden State Warriors|T&T-A",
+		"Portland Trail Blazers & Golden State Warriors & Sacramento Kings|T&T-A",
 		"Portland Trail Blazers & Golden State Warriors|T&T-W&A",
 		"Seth Curry & Stephen Curry|P&P-B&W",
 		"Kevin Durant|P-B",
@@ -13355,7 +13480,7 @@
 		"Minnesota Timberwolves|T-A",
 		"Karl-Anthony Towns|P-B&W",
 		"Jimmy Butler|P-B&W",
-		"Minnesota Timberwolves|T-A"
+		"Minnesota Timberwolves & Portland Trail Blazers|T&T-A"
 	],
 	[
 		"Golden State Warriors & Memphis Grizzlies|T&T-B&W",
@@ -13522,7 +13647,7 @@
 		"Kyle Kuzma|P-B&W",
 		"Ivica Zubac|P-B&W",
 		"Los Angeles Lakers|T-B",
-		"Los Angeles Lakers|T-B&A",
+		"Los Angeles Lakers & Sacramento Kings|T&T-B&A",
 		"Golden State Warriors|T-A",
 		"Andre Iguodala|P-B&W",
 		"Andre Iguodala|P-A",
@@ -13530,10 +13655,14 @@
 		"Golden State Warriors|T-A"
 	],
 	[
+		"Portland Trail Blazers & Portland Trail Blazers|T&T-B&A",
 		"Jusuf Nurki\u0107|P-B&W",
 		"Jusuf Nurki\u0107|P-A",
+		"Golden State Warriors & Portland Trail Blazers & Portland Trail Blazers & Golden State Warriors|T&T-A",
+		"Golden State Warriors & Golden State Warriors|T&T-B&W&A",
 		"Stephen Curry & Seth Curry|P&P-B&W",
-		"Kevin Durant|P-B"
+		"Kevin Durant|P-B",
+		"Portland Trail Blazers & Portland Trail Blazers|T&T-A"
 	],
 	[
 		"Houston Rockets|T-A",
@@ -13544,7 +13673,7 @@
 		"Stephen Curry|P-B&A",
 		"Kevin Durant|P-B&W",
 		"Kevin Durant|P-A",
-		"Golden State Warriors & Houston Rockets|T&T-A"
+		"Golden State Warriors & Houston Rockets & Sacramento Kings|T&T-A"
 	],
 	[
 		"Stephen Curry & Golden State Warriors|P&T-B&W&A",
@@ -13588,7 +13717,7 @@
 		"Stephen Curry|P-B&A",
 		"Kevin Durant|P-B&W",
 		"Kevin Durant|P-A",
-		"Philadelphia 76ers|T-A"
+		"Philadelphia 76ers & Sacramento Kings|T&T-A"
 	],
 	[
 		"Golden State Warriors|T-B&W&A",
@@ -13640,7 +13769,7 @@
 		"Joe Ingles|P-B",
 		"Rudy Gobert|P-B",
 		"Andre Iguodala & Rudy Gobert|P&P-B&W",
-		"Golden State Warriors & Utah Jazz|T&T-A"
+		"Golden State Warriors & Utah Jazz & Portland Trail Blazers|T&T-A"
 	],
 	[
 		"Golden State Warriors|T-B&W&A",
@@ -13705,7 +13834,7 @@
 		"Stephen Curry|P-B&W",
 		"Stephen Curry|P-B",
 		"DeMarcus Cousins|P-B",
-		"Phoenix Suns|T-A"
+		"Phoenix Suns & Houston Rockets|T&T-A"
 	],
 	[
 		"Golden State Warriors|T-B&A",
@@ -13773,9 +13902,9 @@
 		"Golden State Warriors|T-B&A",
 		"Denver Nuggets|T-B&A",
 		"Jamal Murray|P-B&W",
-		"Denver Nuggets|T-A",
+		"Denver Nuggets & Los Angeles Lakers|T&T-A",
 		"Golden State Warriors|T-B&W&A",
-		"Golden State Warriors & Denver Nuggets|T&T-B&A"
+		"Golden State Warriors & Denver Nuggets & Los Angeles Lakers|T&T-B&A"
 	],
 	[
 		"Golden State Warriors|T-B&W&A",
@@ -13939,12 +14068,12 @@
 		"Boston Celtics|T-A",
 		"Kyrie Irving & Boston Celtics|P&T-B&W",
 		"Marcus Morris|P-B",
-		"Boston Celtics|T-B&A",
+		"Boston Celtics & Brooklyn Nets|T&T-B&A",
 		"Washington Wizards|T-B&A",
 		"John Wall & Washington Wizards|P&T-B&W",
 		"Jeff Green & Bradley Beal|P&P-B",
 		"Washington Wizards|T-B",
-		"Washington Wizards & Boston Celtics|T&T-B&A"
+		"Washington Wizards & Boston Celtics & Atlanta Hawks|T&T-B&A"
 	],
 	[
 		"John Wall & Washington Wizards|P&T-B&W&A",
@@ -14024,7 +14153,7 @@
 		"George Hill|P-B&W&A",
 		"Milwaukee Bucks|T-B&W",
 		"Milwaukee Bucks|T-B&W",
-		"Washington Wizards & Milwaukee Bucks|T&T-B&A"
+		"Washington Wizards & Milwaukee Bucks & Atlanta Hawks|T&T-B&A"
 	],
 	[
 		"Kawhi Leonard & Toronto Raptors|P&T-B&W&A",
@@ -14042,7 +14171,7 @@
 		"New York Knicks|T-B&W&A",
 		"Otto Porter & Emmanuel Mudiay|P&P-B&A",
 		"Damyean Dotson & New York Knicks|P&T-B&W",
-		"Washington Wizards & New York Knicks|T&T-B&A"
+		"Washington Wizards & New York Knicks & Detroit Pistons|T&T-B&A"
 	],
 	[
 		"Washington Wizards|T-A",
@@ -14063,7 +14192,7 @@
 		"Kevin Durant|P-B",
 		"DeMarcus Cousins|P-B",
 		"Golden State Warriors|T-B&A",
-		"Washington Wizards|T-A"
+		"Washington Wizards & Boston Celtics|T&T-A"
 	],
 	[
 		"Washington Wizards & Indiana Pacers|T&T-B&W",
@@ -14128,7 +14257,7 @@
 		"Bojan Bogdanovi\u0107|P-B",
 		"Domantas Sabonis|P-B",
 		"Darren Collison|P-B",
-		"Indiana Pacers|T-A"
+		"Indiana Pacers & Detroit Pistons|T&T-A"
 	],
 	[
 		"Washington Wizards|T-A",
@@ -14215,7 +14344,7 @@
 		"Bradley Beal|P-B&W",
 		"Trevor Ariza|P-B&W",
 		"Washington Wizards|T-A",
-		"Utah Jazz|T-A"
+		"Utah Jazz & New York Knicks|T&T-A"
 	],
 	[
 		"Denver Nuggets|T-B&A",
