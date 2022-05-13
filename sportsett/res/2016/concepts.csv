@@ -1,0 +1,4 @@
+,f2,prec,rec,dld
+imp_players-num_ftrs-cosine_sim-long_reuse-pop,59.75,44.24,65.49,11.48
+imp_players-num_ftrs-cosine_sim-median_reuse-pop,50.39,43.85,52.34,10.78
+imp_players-num_ftrs-cosine_sim-first_reuse-pop,52.56,44.59,55.02,11.46

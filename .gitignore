@@ -20,6 +20,9 @@ __pycache__/
 sportsett/roberta-finetuned/
 notebooks/
 tpot_clf.py
+misc/
+ng_sent_clf/
+sportsett/output/*
 
 # LaserTagger files/folders
 bert/

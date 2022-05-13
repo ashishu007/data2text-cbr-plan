@@ -1,4 +1,4 @@
-import pickle
+import pickle, argparse
 import numpy as np
 from sklearn.neural_network import MLPClassifier
 from sklearn.pipeline import make_pipeline
@@ -26,19 +26,29 @@ class ImpPlayerClassifier:
             'f1': f1_score(target, predictions, average='macro')
         }
 
-train_x = np.load('data/X_train.npz')['arr_0']
-train_y = np.load('data/y_train.npz')['arr_0']
-val_x = np.load('data/X_validation.npz')['arr_0']
-val_y = np.load('data/y_validation.npz')['arr_0']
-test_x = np.load('data/X_test.npz')['arr_0']
-test_y = np.load('data/y_test.npz')['arr_0']
+argparser = argparse.ArgumentParser()
+argparser.add_argument('-season', '--season', type=str, default='2014', \
+                        choices=['2014', '2015', '2016', '2017', '2018'])
+args = argparser.parse_args()
+season = args.season
+print(args, season)
+
+# season = "2014"
+data_dir = f'player_clf/data/{season}'
+
+train_x = np.load(f'{data_dir}/X_train.npz')['arr_0']
+train_y = np.load(f'{data_dir}/y_train.npz')['arr_0']
+val_x = np.load(f'{data_dir}/X_validation.npz')['arr_0']
+val_y = np.load(f'{data_dir}/y_validation.npz')['arr_0']
+test_x = np.load(f'{data_dir}/X_test.npz')['arr_0']
+test_y = np.load(f'{data_dir}/y_test.npz')['arr_0']
 X_train = np.concatenate((train_x, val_x))
 y_train = np.concatenate((train_y, val_y))
 print(X_train.shape, y_train.shape)
 
 ipc_obj = ImpPlayerClassifier()
 model = ipc_obj.train_clf(X_train, y_train)
-pickle.dump(model, open('model/model.pkl', 'wb'))
-model = pickle.load(open('model/model.pkl', 'rb'))
+pickle.dump(model, open(f'player_clf/model/model_{season}.pkl', 'wb'))
+model = pickle.load(open(f'player_clf/model/model_{season}.pkl', 'rb'))
 pred_y = ipc_obj.predict(model, test_x)
 print(ipc_obj.score(pred_y, test_y))

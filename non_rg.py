@@ -178,36 +178,61 @@ class NonRGMetrics:
         # print("avg score:", avg_score)
         return avg_score
 
+    # def calc_len(self, fi):
+
+
 
 obj = NonRGMetrics()
 ent_or_concept = sys.argv[1]
-systems = ['first', 'mean', 'median', 'new_sys', 'cbr', 'temp', 'mp', 'ent', 'hir', 'imp_player_new_sys', 'imp_player_median']#, 'max']
+season = sys.argv[2]
+benchmarks = ['ent', 'hir', 'mp']
+baselines = ['temp', 'cbr']
+dists = ['cosine', 'euclidean']
+reuses = ['long', 'median', 'first']
+players = ['imp', 'all']
+
+systems = baselines + benchmarks
+for player in players:
+    for dist in dists:
+        for reuse in reuses:
+            if player == 'imp':
+                ftrs = ['num', 'set', 'text']
+            elif player == 'all':
+                ftrs = ['num']
+            for ftr in ftrs:
+                systems.append(f"{player}_players-{ftr}_ftrs-{dist}_sim-{reuse}_reuse")
+
+for dist in dists:
+    for reuse in reuses:
+        ftrs = ['num', 'set', 'text']
+        for ftr in ftrs:
+            systems.append(f"imp_players-{ftr}_ftrs-{dist}_sim-{reuse}_reuse-pop")
+
+systems = ['imp_players-num_ftrs-cosine_sim-long_reuse-pop', 
+        'imp_players-num_ftrs-cosine_sim-median_reuse-pop',
+        'imp_players-num_ftrs-cosine_sim-first_reuse-pop'
+        ]
+# season = '2014'
+print(systems, season)
+
 if ent_or_concept != 'len':
     res = {}
     print(f'\nThis is {ent_or_concept}\n')
     for sys_name in systems:
         sys_res = {}
-        file_name = 'concepts' if sys_name == 'new_sys' else 'concepts'
-        predfi = f'sportsett/output/{sys_name}/{file_name}.json'
-        # print(predfi)
-        goldfi = f'sportsett/output/new_sys/gold.json'
+        predfi = f'sportsett/concepts/{season}/{sys_name}.json'
+        goldfi = f'sportsett/concepts/{season}/gold.json'
         prec, rec, jac, f1, dice, f2 = obj.calc_precrec(goldfi, predfi, ent_or_concept=ent_or_concept)
-        dld = obj.calc_dld(goldfi, predfi)
-        score_str = f'\n{sys_name.upper()}\t\t||\tPrec: {prec*100:.2f}\tRec: {rec*100:.2f}\tF1: {f1*100:.2f}\tJac: {jac*100:.2f}\tF2: {f2*100:.2f}\n'
+        dld = obj.calc_dld(goldfi, predfi, ent_or_concept=ent_or_concept)
         sys_res['f2'] = f"{f2*100:.2f}"
         sys_res['prec'] = f"{prec*100:.2f}"
         sys_res['rec'] = f"{rec*100:.2f}"
-        sys_res['f1'] = f"{f1*100:.2f}"
-        sys_res['jac'] = f"{jac*100:.2f}"
+        # sys_res['f1'] = f"{f1*100:.2f}"
+        # sys_res['jac'] = f"{jac*100:.2f}"
         sys_res['dld'] = f"{dld*100:.2f}"
         res[sys_name] = sys_res
-        # print(f'\n{sys_name.upper()}\t||\tPrec: {prec*100:.2f}\tRec: {rec*100:.2f}\tDLD: {dld*100:.2f}\tJac: {jac*100:.2f}\tF1: {f1*100:.2f}\tDICE: {dice*100:.2f}\tF2: {f2*100:.2f}\n')
-        # print(f'\n{sys_name.upper()}\t||\tPrec: {prec*100:.2f}\tRec: {rec*100:.2f}\tF1: {f1*100:.2f}\tJac: {jac*100:.2f}\tF2: {f2*100:.2f}\n')
-        # print(score_str)
-    # open(f'sportsett/output/results_{ent_or_concept}.txt', 'w').write(score_str)
-    # json.dump(res, open(f'sportsett/output/results_{ent_or_concept}.json', 'w'), indent='\t')
     df = pd.DataFrame(res)
-    df.transpose().to_csv(f'sportsett/output/results_{ent_or_concept}.csv')
+    df.transpose().to_csv(f'sportsett/res/{season}/{ent_or_concept}.csv')
 
 else:
     # concept length
@@ -215,13 +240,13 @@ else:
     lens = {}
     for sys_name in systems:
         if sys_name == 'gold':
-            tpls = obj.get_triples_new(f'sportsett/output/new_sys/gold.json')
+            tpls = obj.get_triples_new(f'sportsett/concepts/{season}/gold.json')
         else:
-            tpls = obj.get_triples_new(f'sportsett/output/{sys_name}/concepts.json')
+            tpls = obj.get_triples_new(f'sportsett/concepts/{season}/{sys_name}.json')
         avg = 0
         for tpl in tpls:
             avg += len(tpl)
         avg /= len(tpls)
         print(f"{sys_name}\t{avg}")
         lens[sys_name] = avg
-    json.dump(lens, open(f'sportsett/output/concept_lengths.json', 'w'), indent='\t')
+    json.dump(lens, open(f'sportsett/res/{season}/concept_lengths.json', 'w'), indent='\t')

@@ -1,15 +1,9 @@
-"""
-Evaluate Generated Summaries with on Concept-Ordering score
-"""
-
 import argparse, json
-import numpy as np
 from tqdm import tqdm
 from datasets import load_dataset
 from utils import ExtractConceptOrder
 from clf_utils import ContentTypeData, MultiLabelClassifier
 from coref_resolve import CorefResolver
-from pyxdameraulevenshtein import normalized_damerau_levenshtein_distance
 
 def get_ct_list_from_arr(arr):
     ct_list = []
@@ -21,7 +15,7 @@ def get_ct_list_from_arr(arr):
         ct_list.append('A')
     return ct_list
 
-def main(SYS_NAME='ent'):
+def main(SYS_NAME='ent', season='2014'):
     print(f'Constructing...')
 
     ctd = ContentTypeData()
@@ -52,6 +46,8 @@ def main(SYS_NAME='ent'):
 if __name__ == '__main__':
     parser = argparse.ArgumentParser()
     parser.add_argument('--sys', '-sys', type=str, default='ent', choices=['ent', 'hir', 'mp', 'cbr', 'temp'])
+    parser.add_argument('-season', '--season', type=str, default='2014', \
+                            choices=['2014', '2015', '2016', '2017', '2018'])
     args = parser.parse_args()
-    main(args.sys)
+    main(SYS_NAME=args.sys, season=args.season)
     print('Done!')

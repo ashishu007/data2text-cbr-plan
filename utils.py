@@ -1,7 +1,10 @@
 """
 Extract Concept Ordering from a given summary.
 """
+import json
+import pickle
 import numpy as np
+from sentence_transformers import SentenceTransformer
 
 class ExtractEntities:
     alias_dict = {
@@ -45,7 +48,8 @@ class ExtractEntities:
         for ent in teams_mentioned:
             if ent not in teams_mentioned_final:
                 teams_mentioned_final.append(ent)
-        return teams_mentioned
+        return teams_mentioned_final
+        # return teams_mentioned
         # return list(teams_mentioned)
 
     def get_full_player_ents(self, player_ents_in_sent, item):
@@ -103,8 +107,13 @@ class ExtractEntities:
         for i in vis_player_mention_idxs:
             full_player_ents.append(vbs[i]['name'])
 
+        players_final = []
+        for ent in full_player_ents:
+            if ent not in players_final:
+                players_final.append(ent)
+        return players_final
+        # return full_player_ents
         # print(player_ents_in_sent, full_player_ents)
-        return full_player_ents
 
     def get_all_ents(self, score_dict):
         players = []#set()
@@ -198,11 +207,18 @@ class ExtractConceptOrder:
         self.delim = '|'
         self.ents = ExtractEntities()
         self.clust_dict = {key: [] for key in self.clust_keys}
+        self.ng_sent_clf = pickle.load(open(f'data/ng_sent_clf.pkl', 'rb'))
+        self.embedding_model = SentenceTransformer('bert-base-nli-mean-tokens')
 
     def extract_concept_order(self, score_dict, summary_sentences):
         concept_order = []
         all_ents, teams, players = self.ents.get_all_ents(score_dict)
-        for sent in list(summary_sentences)[1:]:
+
+        # emb_sents = self.embedding_model.encode([x['coref_sent'] for x in summary_sentences[1:]])
+        # ng_sent_lab = self.ng_sent_clf.predict(emb_sents)
+
+        for idx, sent in enumerate(list(summary_sentences)[1:]):
+            # if ng_sent_lab[idx] == 0:
             player_ents_unresolved = self.ents.extract_entities(players, sent['coref_sent'])
             team_ents_unresolved = self.ents.extract_entities(teams, sent['coref_sent'])
             # "_unresolved" because some extracted entities may be either first or last name, or in case of teams, either just name or place of the team
@@ -302,17 +318,25 @@ class ExtractConceptOrder:
                     concept_order.append(f'{ent_str}{self.delim}T&T-W')
                 elif 'A' in sent['content_types']:
                     concept_order.append(f'{ent_str}{self.delim}T&T-A')
-        
+            
         return concept_order
 
 
 class GetEntityRepresentation:
-    NUM_PLAYERS = 13
-
-    bs_keys = ['PTS', 'FGM', 'FGA', 'FG3M', 'FG3A', 'FTM', 'FTA', 
-                'OREB', 'DREB', 'TREB', 'AST', 'STL', 'BLK', 'TOV', 'PF']
-    ls_keys = ['FG3A', 'FG3M', 'FGA', 'FGM', 'FTA', 'FTM', 'DREB', 'OREB', 
-                'TREB', 'BLK', 'AST', 'STL', 'TOV', 'PF', 'PTS', 'MIN']
+    def __init__(self, popularity=False, season="2014"):
+        """
+        Initialize the class.
+        Parameters:
+            popularity (bool): If True, use popularity.
+        """
+        self.NUM_PLAYERS = 13
+        self.bs_keys = ['PTS', 'FGM', 'FGA', 'FG3M', 'FG3A', 'FTM', 'FTA', 
+                        'OREB', 'DREB', 'TREB', 'AST', 'STL', 'BLK', 'TOV', 'PF']
+        self.ls_keys = ['FG3A', 'FG3M', 'FGA', 'FGM', 'FTA', 'FTM', 'DREB', 'OREB', 
+                        'TREB', 'BLK', 'AST', 'STL', 'TOV', 'PF', 'PTS', 'MIN']
+        self.popularity = popularity
+        self.season = season
+        self.pop_score = json.load(open(f'popularity/{season}/pop_score.json'))
 
     def sort_players_by_pts(self, entry, type='HOME'):
         """
@@ -341,12 +365,16 @@ class GetEntityRepresentation:
         player_dict = {'PLAYER-starter': starter, 'PLAYER-double': double, 'PLAYER-MIN': player_min, 'PLAYER-winner': winner}
         for key in self.bs_keys:
             player_dict[f"PLAYER-{key}"] = int(player_stats[key])
+        if self.popularity:
+            player_dict['PLAYER-popularity'] = float(self.pop_score[player_stats['name']]) if player_stats['name'] in self.pop_score else 0.0
         return player_dict
 
     def get_empty_bs_dict(self, winner=1):
         bs_dict = {'PLAYER-starter': 0, 'PLAYER-double': 0, 'PLAYER-MIN': 0, 'PLAYER-winner': winner}
         for key in self.bs_keys:
             bs_dict[f"PLAYER-{key}"] = 0
+        if self.popularity:
+            bs_dict['PLAYER-popularity'] = 0
         return bs_dict
 
     def get_box_score(self, entry, type='HOME'):
@@ -421,4 +449,4 @@ class GetGameRepresentation:
         all_features_for_orbering_cb.extend(t2_pps)
 
         final_rep = [np.mean(list(feature_dict.values())) for feature_dict in all_features_for_orbering_cb]
-        return final_rep
+        return np.array(final_rep)
