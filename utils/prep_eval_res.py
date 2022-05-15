@@ -1,4 +1,5 @@
 import json, pandas as pd, argparse
+from tqdm import tqdm
 
 argparser = argparse.ArgumentParser()
 argparser.add_argument('-season', '--season', type=str, default='2014', \
@@ -16,12 +17,12 @@ entities['systems'] = entities.index
 all_systems = [row['systems'] for _, row in concepts.iterrows()]
 new_systems = [row['systems'] for _, row in concepts.iterrows() if 'players' in row['systems']]
 other_systems = [row['systems'] for _, row in concepts.iterrows() if 'players' not in row['systems']]
-print(len(new_systems), len(other_systems), len(new_systems) + len(other_systems), len(all_systems))
+# print(len(new_systems), len(other_systems), len(new_systems) + len(other_systems), len(all_systems))
 
 dictionc = {'players': [], 'features': [], 'similarity': [], 'reuse': [], 'pop': [], 'f2': [], 'prec': [], 'rec': [], 'dld': []}
 dictione = {'players': [], 'features': [], 'similarity': [], 'reuse': [], 'pop': [], 'f2': [], 'prec': [], 'rec': [], 'dld': []}
 
-for sys in new_systems:
+for sys in tqdm(new_systems):
     info = [i.split('_') for i in sys.split('-')]
     players = info[0][0]
     ftrs = info[1][0]
@@ -56,18 +57,17 @@ for sys in new_systems:
 
 column_names = ['players', 'pop', 'similarity', 'reuse', 'features', 'f2', 'prec', 'rec', 'dld']
 dfe = pd.DataFrame(dictione, columns=column_names)
-print(dfe)
 dfe.to_csv(f'sportsett/res/{season}/eval_entities.csv', index=0)
 
 dfc = pd.DataFrame(dictionc, columns=column_names)
-print(dfc)
 dfc.to_csv(f'sportsett/res/{season}/eval_concepts.csv', index=0)
 
 if season == "all":
+    print("Benchmarks and Baselines")
     dictionc = {'system': [], 'f2': [], 'prec': [], 'rec': [], 'dld': []}
     dictione = {'system': [], 'f2': [], 'prec': [], 'rec': [], 'dld': []}
 
-    for sys in other_systems:
+    for sys in tqdm(other_systems):
         cscore = concepts.loc[concepts['systems'] == sys]
         escore = entities.loc[entities['systems'] == sys]
 

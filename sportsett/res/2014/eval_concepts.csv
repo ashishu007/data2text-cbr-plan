@@ -1,0 +1,4 @@
+players,pop,similarity,reuse,features,f2,prec,rec,dld
+imp,True,cosine,long,num,33.66,32.51,33.96,10.61
+imp,True,cosine,median,num,32.73,36.66,31.88,11.49
+imp,True,cosine,first,num,31.05,34.04,30.38,11.96

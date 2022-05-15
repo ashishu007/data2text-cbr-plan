@@ -1,7 +1,7 @@
 # ses=$1
 
 # for ses in "2014" "2015" "2016" "bens" "juans" "all"
-for ses in "all"
+for ses in "2014"
 do
     echo "=========================================================="
     echo "Season: $ses"
@@ -25,9 +25,10 @@ do
     python3 gen_concepts.py -pop -season $ses
 
     echo "Evaluating..."
-    python3 utils/non_rg.py len $ses
-    python3 utils/non_rg.py concepts $ses
-    python3 utils/non_rg.py entities $ses
+    python3 utils/non_rg.py -eoc len -season $ses
+    python3 utils/non_rg.py -eoc concepts -season $ses
+    python3 utils/non_rg.py -eoc entities -season $ses
+    python3 utils/prep_eval_res.py -season $ses
 
     echo "${ses} season done!!!"
     echo "=========================================================="

@@ -4,6 +4,7 @@
 """
 import json, argparse
 import pandas as pd
+from tqdm import tqdm
 from pyxdameraulevenshtein import normalized_damerau_levenshtein_distance
 
 class NonRGMetrics:
@@ -183,7 +184,6 @@ args = argparser.parse_args()
 args = argparser.parse_args()
 season = args.season
 ent_or_concept = args.eoc
-print(season, ent_or_concept)
 
 obj = NonRGMetrics()
 
@@ -216,15 +216,12 @@ if season != "all":
             'imp_players-num_ftrs-cosine_sim-median_reuse-pop',
             'imp_players-num_ftrs-cosine_sim-first_reuse-pop',
             ]
-
-print(season, systems)
-# for i in systems:
-#     print(i)
+print(f"season: {season}, ent_or_concept: {ent_or_concept}, total systems: {len(systems)}")
 
 if ent_or_concept != 'len':
     res = {}
     print(f'\nThis is {ent_or_concept}\n')
-    for sys_name in systems:
+    for sys_name in tqdm(systems):
         sys_res = {}
         predfi = f'sportsett/concepts/{season}/{sys_name}.json'
         goldfi = f'sportsett/concepts/{season}/gold.json'
@@ -236,13 +233,13 @@ if ent_or_concept != 'len':
         sys_res['dld'] = f"{dld*100:.2f}"
         res[sys_name] = sys_res
     df = pd.DataFrame(res)
-    print(df.transpose())
     df.transpose().to_csv(f'sportsett/res/{season}/{ent_or_concept}.csv')
 
 else:
+    print(f'\nThis is {ent_or_concept}\n')
     systems.append('gold')
     lens = {}
-    for sys_name in systems:
+    for sys_name in tqdm(systems):
         if sys_name == 'gold':
             tpls = obj.get_triples_new(f'sportsett/concepts/{season}/gold.json')
         else:
