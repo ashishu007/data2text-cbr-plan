@@ -17,7 +17,7 @@ class ImpPlayerClassifier:
         exported_pipeline.fit(features, target)
         return exported_pipeline
 
-    def predict(self, model, features):
+    def prediction(self, model, features):
         return model.predict(features)
     
     def score(self, predictions, target):
@@ -28,12 +28,11 @@ class ImpPlayerClassifier:
 
 argparser = argparse.ArgumentParser()
 argparser.add_argument('-season', '--season', type=str, default='2014', \
-                        choices=['2014', '2015', '2016', '2017', '2018'])
+                        choices=['2014', '2015', '2016', '2017', '2018', 'all', 'bens', 'juans'])
 args = argparser.parse_args()
 season = args.season
 print(args, season)
 
-# season = "2014"
 data_dir = f'player_clf/data/{season}'
 
 train_x = np.load(f'{data_dir}/X_train.npz')['arr_0']
@@ -44,11 +43,11 @@ test_x = np.load(f'{data_dir}/X_test.npz')['arr_0']
 test_y = np.load(f'{data_dir}/y_test.npz')['arr_0']
 X_train = np.concatenate((train_x, val_x))
 y_train = np.concatenate((train_y, val_y))
-print(X_train.shape, y_train.shape)
+print(X_train.shape, y_train.shape, test_x.shape, test_y.shape)
 
 ipc_obj = ImpPlayerClassifier()
 model = ipc_obj.train_clf(X_train, y_train)
-pickle.dump(model, open(f'player_clf/model/model_{season}.pkl', 'wb'))
-model = pickle.load(open(f'player_clf/model/model_{season}.pkl', 'rb'))
-pred_y = ipc_obj.predict(model, test_x)
+# pickle.dump(model, open(f'player_clf/model/model_{season}.pkl', 'wb'))
+# model = pickle.load(open(f'player_clf/model/model_{season}.pkl', 'rb'))
+pred_y = ipc_obj.prediction(model, test_x)
 print(ipc_obj.score(pred_y, test_y))

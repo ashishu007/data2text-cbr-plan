@@ -1,11 +1,11 @@
 import json, pickle, argparse
 import numpy as np
 from tqdm import tqdm
-from utils import GetEntityRepresentation, GetGameRepresentation
+from utils.utils import GetEntityRepresentation, GetGameRepresentation
+from utils.entity_ranking import RankEntities
 from datasets import load_dataset
-from entity_ranking import RankEntities
 from sklearn.metrics.pairwise import euclidean_distances, cosine_distances
-from imp_players_utility import get_imp_players_test, get_game_repr_imp_players
+from utils.imp_players_utility import get_imp_players_test, get_game_repr_imp_players
 from sentence_transformers import SentenceTransformer
 
 def get_ents_with_concepts(item, concept_order, re_obj):
@@ -80,11 +80,11 @@ def main(POP=False, season='2014'):
 
     season = args.season
 
-    if season in ['2014', '2015', '2016']:
+    if season in ['2014', '2015', '2016', 'bens']:
         part = 'train'
-    if season in ['2017']:
+    if season in ['2017', 'juans']:
         part = 'validation'
-    if season in ['2018']:
+    if season in ['2018', 'all']:
         part = 'test'
     data_split = json.load(open(f'data/seasonal_splits.json'))
     train_ids = data_split[f'{season}']['train']
@@ -93,7 +93,7 @@ def main(POP=False, season='2014'):
 
     dataset = load_dataset('GEM/sportsett_basketball')
     embedding_model = SentenceTransformer('bert-base-nli-mean-tokens')
-    imp_player_clf = pickle.load(open('player_clf/model/model.pkl', 'rb'))
+    imp_player_clf = pickle.load(open(f'player_clf/model/model_{season}.pkl', 'rb'))
     ger_obj = GetEntityRepresentation(popularity=POP)
     ggr_obj = GetGameRepresentation()
     re_obj = RankEntities()
@@ -105,44 +105,36 @@ def main(POP=False, season='2014'):
     cb_sol = json.load(open(f'cbs/{season}/cb_sol.json'))
 
     if players == 'imp':
-        all_ftrs_types = ['num']#, 'text', 'set']
+        all_ftrs_types = ['text']#, 'set']#, 'text', 'set']
     elif players == 'all':
         all_ftrs_types = ['num']
 
     for ftrs in all_ftrs_types:
-        # for dist_type in ['euclidean', 'cosine']:
-        #     for reuse in ['long', 'median', 'first']:
-
-        # print(f"\nPlayers: {players}\tFeature Type: {ftrs}\tDist Type: {dist_type}\tReuse Type: {reuse}")
-        print(f"\nPlayers: {players}\tFeature Type: {ftrs}")
-        prob_file = f"{players}_players_{ftrs}_ftrs_pop_cb_prob" if POP else f"{players}_players_{ftrs}_ftrs_cb_prob"
-        cb_prob = np.load(f'cbs/{season}/{prob_file}.npz')['arr_0']
-        print(f"Prob Set: {cb_prob.shape}\tSol Set: {len(cb_sol)}\n{prob_file}")
-
-        target_problem_reps = []
-        for _, entry in tqdm(enumerate(dataset[f'{part}'])):
-            if entry['gem_id'] not in test_ids:
-                continue
-            if players == 'imp':
-                if POP:
-                    ger_obj1 = GetEntityRepresentation()
-                    imp_players = get_imp_players_test(entry, ger_obj1, imp_player_clf)
-                else:
-                    imp_players = get_imp_players_test(entry, ger_obj, imp_player_clf)
-                target_problem_rep = get_game_repr_imp_players(entry, ger_obj, imp_players, embedding_model, ftrs_type=ftrs)
-            elif players == 'all':
-                assert ftrs == 'num'
-                target_problem_rep = ggr_obj.get_full_game_repr(entry)
-            target_problem_reps.append(target_problem_rep)
-        
-        target_problem_reps_arr = np.array(target_problem_reps)
-        print(f"Target Problem Reps: {target_problem_reps_arr.shape}")
-
-        for dist_type in ['cosine']:#['euclidean', 'cosine']:
+        for dist_type in ['cosine', 'euclidean']:#, 'cosine']:
             for reuse in ['long', 'median', 'first']:
-                test_set_sol_pred = []
+
+                print(f"\nPlayers: {players}\tFeature Type: {ftrs}")
+                prob_file = f"{players}_players_{ftrs}_ftrs_pop_cb_prob" if POP else f"{players}_players_{ftrs}_ftrs_cb_prob"
+                cb_prob = np.load(f'cbs/{season}/{prob_file}.npz')['arr_0']
+                print(f"Prob Set: {cb_prob.shape}\tSol Set: {len(cb_sol)}\n{prob_file}")
                 print(f"\nPlayers: {players}\tFeature Type: {ftrs}\tDist Type: {dist_type}\tReuse Type: {reuse}")
-                for _, target_problem_rep in tqdm(enumerate(target_problem_reps_arr)):
+                test_set_sol_pred = []
+
+                for _, entry in tqdm(enumerate(dataset[f'{part}'])):
+                    if entry['gem_id'] not in test_ids:
+                        continue
+
+                    if players == 'imp':
+                        if POP:
+                            ger_obj1 = GetEntityRepresentation()
+                            imp_players = get_imp_players_test(entry, ger_obj1, imp_player_clf)
+                        else:
+                            imp_players = get_imp_players_test(entry, ger_obj, imp_player_clf)
+                        target_problem_rep = get_game_repr_imp_players(entry, ger_obj, imp_players, embedding_model, ftrs_type=ftrs)
+                    elif players == 'all':
+                        assert ftrs == 'num'
+                        target_problem_rep = ggr_obj.get_full_game_repr(entry)
+                
                     if dist_type == 'cosine':
                         dists = cosine_distances(cb_prob, target_problem_rep.reshape(1, -1))
                     elif dist_type == 'euclidean':
@@ -161,7 +153,7 @@ if __name__ == '__main__':
     argparser = argparse.ArgumentParser()
     argparser.add_argument('--pop', '-pop', action='store_true')
     argparser.add_argument('-season', '--season', type=str, default='2014', \
-                            choices=['2014', '2015', '2016', '2017', '2018'])
+                            choices=['2014', '2015', '2016', '2017', '2018', 'bens', 'all', 'juans'])
     args = argparser.parse_args()
     print(args, args.pop, type(args.pop), args.season, type(args.season))
     main(POP=args.pop, season=args.season)

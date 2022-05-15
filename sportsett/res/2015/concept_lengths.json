@@ -1,6 +1,6 @@
 {
-	"imp_players-num_ftrs-cosine_sim-long_reuse-pop": 14.33,
-	"imp_players-num_ftrs-cosine_sim-median_reuse-pop": 13.38,
-	"imp_players-num_ftrs-cosine_sim-first_reuse-pop": 13.625,
+	"imp_players-num_ftrs-cosine_sim-long_reuse-pop": 13.255,
+	"imp_players-num_ftrs-cosine_sim-median_reuse-pop": 12.165,
+	"imp_players-num_ftrs-cosine_sim-first_reuse-pop": 12.315,
 	"gold": 13.625
 }
