@@ -1,7 +1,5 @@
-# ses=$1
-
-# for ses in "2014" "2015" "2016" "bens" "juans" "all"
-for ses in "2014"
+for ses in "2014" "2015" "2016" "bens" "juans" "all"
+# for ses in "2014"
 do
     echo "=========================================================="
     echo "Season: $ses"

@@ -17,10 +17,9 @@ entities['systems'] = entities.index
 all_systems = [row['systems'] for _, row in concepts.iterrows()]
 new_systems = [row['systems'] for _, row in concepts.iterrows() if 'players' in row['systems']]
 other_systems = [row['systems'] for _, row in concepts.iterrows() if 'players' not in row['systems']]
-# print(len(new_systems), len(other_systems), len(new_systems) + len(other_systems), len(all_systems))
 
-dictionc = {'players': [], 'features': [], 'similarity': [], 'reuse': [], 'pop': [], 'f2': [], 'prec': [], 'rec': [], 'dld': []}
-dictione = {'players': [], 'features': [], 'similarity': [], 'reuse': [], 'pop': [], 'f2': [], 'prec': [], 'rec': [], 'dld': []}
+dictionc = {'players': [], 'features': [], 'similarity': [], 'reuse': [], 'pop': [], 'f2': [], 'prec': [], 'rec': [], 'dld': [], 'length': []}
+dictione = {'players': [], 'features': [], 'similarity': [], 'reuse': [], 'pop': [], 'f2': [], 'prec': [], 'rec': [], 'dld': [], 'length': []}
 
 for sys in tqdm(new_systems):
     info = [i.split('_') for i in sys.split('-')]
@@ -44,6 +43,7 @@ for sys in tqdm(new_systems):
     dictionc['prec'].append(cscore['prec'].values[0])
     dictionc['rec'].append(cscore['rec'].values[0])
     dictionc['dld'].append(cscore['dld'].values[0])
+    dictionc['length'].append(float(f"{lens[sys]:.2f}"))
     
     dictione['players'].append(players)
     dictione['features'].append(ftrs)
@@ -54,8 +54,9 @@ for sys in tqdm(new_systems):
     dictione['prec'].append(escore['prec'].values[0])
     dictione['rec'].append(escore['rec'].values[0])
     dictione['dld'].append(escore['dld'].values[0])
+    dictione['length'].append(float(f"{lens[sys]:.2f}"))
 
-column_names = ['players', 'pop', 'similarity', 'reuse', 'features', 'f2', 'prec', 'rec', 'dld']
+column_names = ['players', 'pop', 'similarity', 'reuse', 'features', 'f2', 'prec', 'rec', 'dld', 'length']
 dfe = pd.DataFrame(dictione, columns=column_names)
 dfe.to_csv(f'sportsett/res/{season}/eval_entities.csv', index=0)
 
@@ -64,8 +65,8 @@ dfc.to_csv(f'sportsett/res/{season}/eval_concepts.csv', index=0)
 
 if season == "all":
     print("Benchmarks and Baselines")
-    dictionc = {'system': [], 'f2': [], 'prec': [], 'rec': [], 'dld': []}
-    dictione = {'system': [], 'f2': [], 'prec': [], 'rec': [], 'dld': []}
+    dictionc = {'system': [], 'f2': [], 'prec': [], 'rec': [], 'dld': [], 'length': []}
+    dictione = {'system': [], 'f2': [], 'prec': [], 'rec': [], 'dld': [], 'length': []}
 
     for sys in tqdm(other_systems):
         cscore = concepts.loc[concepts['systems'] == sys]
@@ -76,12 +77,14 @@ if season == "all":
         dictionc['prec'].append(cscore['prec'].values[0])
         dictionc['rec'].append(cscore['rec'].values[0])
         dictionc['dld'].append(cscore['dld'].values[0])
+        dictionc['length'].append(float(f"{lens[sys]:.2f}"))
         
         dictione['system'].append(sys)
         dictione['f2'].append(escore['f2'].values[0])
         dictione['prec'].append(escore['prec'].values[0])
         dictione['rec'].append(escore['rec'].values[0])
         dictione['dld'].append(escore['dld'].values[0])
+        dictione['length'].append(float(f"{lens[sys]:.2f}"))
 
     dfc = pd.DataFrame(dictionc)
     dfc.to_csv(f'sportsett/res/{season}/eval_concepts_other.csv', index=0)
