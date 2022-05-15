@@ -2,7 +2,7 @@
 # usage:
     python non_rg_metrics.py gold_tuple_fi pred_tuple_fi
 """
-import json, sys
+import json, argparse
 import pandas as pd
 from pyxdameraulevenshtein import normalized_damerau_levenshtein_distance
 
@@ -174,9 +174,19 @@ class NonRGMetrics:
         return avg_score
 
 
+argparser = argparse.ArgumentParser()
+argparser.add_argument('-season', '--season', type=str, default='2014', \
+                        choices=['2014', '2015', '2016', '2017', '2018', 'bens', 'all', 'juans'])
+argparser.add_argument('-eoc', '--eoc', type=str, default='concepts', \
+                        choices=['entities', 'concepts', 'len'])
+args = argparser.parse_args()
+args = argparser.parse_args()
+season = args.season
+ent_or_concept = args.eoc
+print(season, ent_or_concept)
+
 obj = NonRGMetrics()
-ent_or_concept = sys.argv[1]
-season = sys.argv[2]
+
 benchmarks = ['ent', 'hir', 'mp']
 baselines = ['temp', 'cbr']
 dists = ['cosine', 'euclidean']
@@ -184,6 +194,13 @@ reuses = ['long', 'median', 'first']
 players = ['imp', 'all']
 
 systems = baselines + benchmarks
+
+for dist in dists:
+    for reuse in reuses:
+        ftrs = ['num', 'set', 'text']
+        for ftr in ftrs:
+            systems.append(f"imp_players-{ftr}_ftrs-{dist}_sim-{reuse}_reuse-pop")
+
 for player in players:
     for dist in dists:
         for reuse in reuses:
@@ -194,22 +211,15 @@ for player in players:
             for ftr in ftrs:
                 systems.append(f"{player}_players-{ftr}_ftrs-{dist}_sim-{reuse}_reuse")
 
-for dist in dists:
-    for reuse in reuses:
-        ftrs = ['num', 'set', 'text']
-        for ftr in ftrs:
-            systems.append(f"imp_players-{ftr}_ftrs-{dist}_sim-{reuse}_reuse-pop")
-
 if season != "all":
     systems = ['imp_players-num_ftrs-cosine_sim-long_reuse-pop', 
             'imp_players-num_ftrs-cosine_sim-median_reuse-pop',
             'imp_players-num_ftrs-cosine_sim-first_reuse-pop',
-            # 'imp_players-num_ftrs-cosine_sim-long_reuse', 
-            # 'imp_players-num_ftrs-cosine_sim-median_reuse',
-            # 'imp_players-num_ftrs-cosine_sim-first_reuse'
             ]
 
-print(systems, season)
+print(season, systems)
+# for i in systems:
+#     print(i)
 
 if ent_or_concept != 'len':
     res = {}

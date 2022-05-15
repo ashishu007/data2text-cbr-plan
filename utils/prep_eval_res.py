@@ -54,10 +54,13 @@ for sys in new_systems:
     dictione['rec'].append(escore['rec'].values[0])
     dictione['dld'].append(escore['dld'].values[0])
 
-dfe = pd.DataFrame(dictione)
+column_names = ['players', 'pop', 'similarity', 'reuse', 'features', 'f2', 'prec', 'rec', 'dld']
+dfe = pd.DataFrame(dictione, columns=column_names)
+print(dfe)
 dfe.to_csv(f'sportsett/res/{season}/eval_entities.csv', index=0)
 
-dfc = pd.DataFrame(dictionc)
+dfc = pd.DataFrame(dictionc, columns=column_names)
+print(dfc)
 dfc.to_csv(f'sportsett/res/{season}/eval_concepts.csv', index=0)
 
 if season == "all":
