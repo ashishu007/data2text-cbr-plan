@@ -203,12 +203,12 @@ for dist in dists:
             systems.append(f"imp_players-{ftr}_ftrs-{dist}_sim-{reuse}_reuse-pop")
             if ftr == 'set':
                 systems.append(f"imp_players-{ftr}_ftrs-{dist}_sim-{reuse}_reuse-pop-weighted")
-                for topk in [20, 25, 30]:
+                for topk in [5, 10, 20, 25, 30]:
                     if reuse == 'first' or dist == 'euclidean':
                         continue
                     systems.append(f"imp_players-{ftr}_ftrs-{dist}_sim-{reuse}_reuse-pop-weighted-topk_{topk}")
             if ftr == 'text' or ftr == 'set':
-                for topk in [20, 25, 30]:
+                for topk in [5, 10, 20, 25, 30]:
                     if reuse == 'first' or dist == 'euclidean':
                         continue
                     systems.append(f"imp_players-{ftr}_ftrs-{dist}_sim-{reuse}_reuse-pop-topk_{topk}")
