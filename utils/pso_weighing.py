@@ -19,7 +19,9 @@ ent_type = args.ent
 print(args)
 print('Loading data...')
 
-data = json.load(open(f'ranking_outs/{ent_type}4pso_train.json'))
+file_name = f'{ent_type}4pso_train.json' if ent_type == 'teams' else f'{ent_type}4pso_train_pop.json'
+print(file_name)
+data = json.load(open(f'ranking_outs/{file_name}'))
 X = np.array([item['features'] for item in data])
 y = np.array([item['label'] for item in data])
 num_features = X.shape[1]
@@ -91,4 +93,5 @@ optimizer = ps.single.GlobalBestPSO(n_particles=100, dimensions=dimensions, opti
 
 # Perform optimization
 cost, pos = optimizer.optimize(f, iters=100)
-np.save(f'ranking_outs/{ent_type}_weights1.npy', pos)
+out_file_name = f'{ent_type}_weights_pop' if 'pop' in file_name else f'{ent_type}_weights' 
+np.save(f'ranking_outs/{out_file_name}.npy', pos)

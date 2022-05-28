@@ -18,8 +18,16 @@ all_systems = [row['systems'] for _, row in concepts.iterrows()]
 new_systems = [row['systems'] for _, row in concepts.iterrows() if 'players' in row['systems']]
 other_systems = [row['systems'] for _, row in concepts.iterrows() if 'players' not in row['systems']]
 
-dictionc = {'players': [], 'features': [], 'similarity': [], 'reuse': [], 'pop': [], 'f2': [], 'prec': [], 'rec': [], 'dld': [], 'length': []}
-dictione = {'players': [], 'features': [], 'similarity': [], 'reuse': [], 'pop': [], 'f2': [], 'prec': [], 'rec': [], 'dld': [], 'length': []}
+dictionc = {
+    'players': [], 'features': [], 'similarity': [], 'reuse': [], 
+    'pop': [], 'weighted': [], 'topk': [], 
+    'f2': [], 'prec': [], 'rec': [], 'dld': [], 'length': []
+    }
+dictione = {
+    'players': [], 'features': [], 'similarity': [], 'reuse': [], 
+    'pop': [], 'weighted': [], 'topk': [], 
+    'f2': [], 'prec': [], 'rec': [], 'dld': [], 'length': []
+    }
 
 for sys in tqdm(new_systems):
     info = [i.split('_') for i in sys.split('-')]
@@ -27,10 +35,23 @@ for sys in tqdm(new_systems):
     ftrs = info[1][0]
     sim = info[2][0]
     reuse = info[3][0]
-    if len(info) > 4:
-        pop = True
-    else:
-        pop = False
+    
+    pop = True if 'pop' in sys else False
+    weighted = True if 'weighted' in sys else False
+    topk = 15
+
+    if 'topk' in sys:
+        topk = int(info[-1][1])
+    
+    # if len(info) == 5:
+    #     pop = True
+    #     weighted = False
+    # elif len(info) == 6:
+    #     weighted = True
+    #     pop = True
+    # else:
+    #     pop = False
+    #     weighted = False
     cscore = concepts.loc[concepts['systems'] == sys]
     escore = entities.loc[entities['systems'] == sys]
     
@@ -39,6 +60,8 @@ for sys in tqdm(new_systems):
     dictionc['similarity'].append(sim)
     dictionc['reuse'].append(reuse)
     dictionc['pop'].append(pop)
+    dictionc['weighted'].append(weighted)
+    dictionc['topk'].append(topk)
     dictionc['f2'].append(cscore['f2'].values[0])
     dictionc['prec'].append(cscore['prec'].values[0])
     dictionc['rec'].append(cscore['rec'].values[0])
@@ -50,18 +73,23 @@ for sys in tqdm(new_systems):
     dictione['similarity'].append(sim)
     dictione['reuse'].append(reuse)
     dictione['pop'].append(pop)
+    dictione['weighted'].append(weighted)
+    dictione['topk'].append(topk)
     dictione['f2'].append(escore['f2'].values[0])
     dictione['prec'].append(escore['prec'].values[0])
     dictione['rec'].append(escore['rec'].values[0])
     dictione['dld'].append(escore['dld'].values[0])
     dictione['length'].append(float(f"{lens[sys]:.2f}"))
 
-column_names = ['players', 'pop', 'similarity', 'reuse', 'features', 'f2', 'prec', 'rec', 'dld', 'length']
+column_names = ['players', 'pop', 'weighted', 'similarity', 'reuse', 'features', 'topk', \
+                'f2', 'prec', 'rec', 'dld', 'length']
 dfe = pd.DataFrame(dictione, columns=column_names)
 dfe.to_csv(f'sportsett/res/{season}/eval_entities.csv', index=0)
 
 dfc = pd.DataFrame(dictionc, columns=column_names)
 dfc.to_csv(f'sportsett/res/{season}/eval_concepts.csv', index=0)
+
+# print(dfc)
 
 if season == "all":
     print("Benchmarks and Baselines")

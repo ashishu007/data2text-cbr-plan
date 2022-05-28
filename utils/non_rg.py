@@ -197,9 +197,21 @@ systems = baselines + benchmarks
 
 for dist in dists:
     for reuse in reuses:
+        # systems.append(f"imp_players-set_ftrs-{dist}_sim-{reuse}_reuse-pop-weighted")
         ftrs = ['num', 'set', 'text']
         for ftr in ftrs:
             systems.append(f"imp_players-{ftr}_ftrs-{dist}_sim-{reuse}_reuse-pop")
+            if ftr == 'set':
+                systems.append(f"imp_players-{ftr}_ftrs-{dist}_sim-{reuse}_reuse-pop-weighted")
+                for topk in [20, 25, 30]:
+                    if reuse == 'first' or dist == 'euclidean':
+                        continue
+                    systems.append(f"imp_players-{ftr}_ftrs-{dist}_sim-{reuse}_reuse-pop-weighted-topk_{topk}")
+            if ftr == 'text' or ftr == 'set':
+                for topk in [20, 25, 30]:
+                    if reuse == 'first' or dist == 'euclidean':
+                        continue
+                    systems.append(f"imp_players-{ftr}_ftrs-{dist}_sim-{reuse}_reuse-pop-topk_{topk}")
 
 for player in players:
     for dist in dists:
@@ -217,6 +229,7 @@ if season != "all":
             'imp_players-num_ftrs-cosine_sim-first_reuse-pop',
             ]
 print(f"season: {season}, ent_or_concept: {ent_or_concept}, total systems: {len(systems)}")
+print(f"systems: {systems}")
 
 if ent_or_concept != 'len':
     res = {}
@@ -248,6 +261,6 @@ else:
         for tpl in tpls:
             avg += len(tpl)
         avg /= len(tpls)
-        print(f"{sys_name}\t{avg}")
+        # print(f"{sys_name}\t{avg}")
         lens[sys_name] = avg
     json.dump(lens, open(f'sportsett/res/{season}/concept_lengths.json', 'w'), indent='\t')
