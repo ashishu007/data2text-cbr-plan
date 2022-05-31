@@ -243,6 +243,7 @@ if ent_or_concept != 'len':
         sys_res['f2'] = f"{f2*100:.2f}"
         sys_res['prec'] = f"{prec*100:.2f}"
         sys_res['rec'] = f"{rec*100:.2f}"
+        sys_res['f1'] = f"{f1*100:.2f}"
         sys_res['dld'] = f"{dld*100:.2f}"
         res[sys_name] = sys_res
     df = pd.DataFrame(res)

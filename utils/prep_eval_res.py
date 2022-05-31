@@ -21,12 +21,12 @@ other_systems = [row['systems'] for _, row in concepts.iterrows() if 'players' n
 dictionc = {
     'players': [], 'features': [], 'similarity': [], 'reuse': [], 
     'pop': [], 'weighted': [], 'topk': [], 
-    'f2': [], 'prec': [], 'rec': [], 'dld': [], 'length': []
+    'f2': [], 'prec': [], 'rec': [], 'f1': [], 'dld': [], 'length': []
     }
 dictione = {
     'players': [], 'features': [], 'similarity': [], 'reuse': [], 
     'pop': [], 'weighted': [], 'topk': [], 
-    'f2': [], 'prec': [], 'rec': [], 'dld': [], 'length': []
+    'f2': [], 'prec': [], 'rec': [], 'f1': [], 'dld': [], 'length': []
     }
 
 for sys in tqdm(new_systems):
@@ -65,6 +65,7 @@ for sys in tqdm(new_systems):
     dictionc['f2'].append(cscore['f2'].values[0])
     dictionc['prec'].append(cscore['prec'].values[0])
     dictionc['rec'].append(cscore['rec'].values[0])
+    dictionc['f1'].append(cscore['f1'].values[0])
     dictionc['dld'].append(cscore['dld'].values[0])
     dictionc['length'].append(float(f"{lens[sys]:.2f}"))
     
@@ -78,11 +79,12 @@ for sys in tqdm(new_systems):
     dictione['f2'].append(escore['f2'].values[0])
     dictione['prec'].append(escore['prec'].values[0])
     dictione['rec'].append(escore['rec'].values[0])
+    dictione['f1'].append(escore['f1'].values[0])
     dictione['dld'].append(escore['dld'].values[0])
     dictione['length'].append(float(f"{lens[sys]:.2f}"))
 
 column_names = ['players', 'pop', 'weighted', 'similarity', 'reuse', 'features', 'topk', \
-                'f2', 'prec', 'rec', 'dld', 'length']
+                'f2', 'prec', 'rec', 'f1', 'dld', 'length']
 dfe = pd.DataFrame(dictione, columns=column_names)
 dfe.to_csv(f'sportsett/res/{season}/eval_entities.csv', index=0)
 
@@ -93,8 +95,8 @@ dfc.to_csv(f'sportsett/res/{season}/eval_concepts.csv', index=0)
 
 if season == "all":
     print("Benchmarks and Baselines")
-    dictionc = {'system': [], 'f2': [], 'prec': [], 'rec': [], 'dld': [], 'length': []}
-    dictione = {'system': [], 'f2': [], 'prec': [], 'rec': [], 'dld': [], 'length': []}
+    dictionc = {'system': [], 'f2': [], 'prec': [], 'rec': [], 'f1': [], 'dld': [], 'length': []}
+    dictione = {'system': [], 'f2': [], 'prec': [], 'rec': [], 'f1': [], 'dld': [], 'length': []}
 
     for sys in tqdm(other_systems):
         cscore = concepts.loc[concepts['systems'] == sys]
@@ -104,6 +106,7 @@ if season == "all":
         dictionc['f2'].append(cscore['f2'].values[0])
         dictionc['prec'].append(cscore['prec'].values[0])
         dictionc['rec'].append(cscore['rec'].values[0])
+        dictionc['f1'].append(cscore['f1'].values[0])
         dictionc['dld'].append(cscore['dld'].values[0])
         dictionc['length'].append(float(f"{lens[sys]:.2f}"))
         
@@ -111,6 +114,7 @@ if season == "all":
         dictione['f2'].append(escore['f2'].values[0])
         dictione['prec'].append(escore['prec'].values[0])
         dictione['rec'].append(escore['rec'].values[0])
+        dictione['f1'].append(escore['f1'].values[0])
         dictione['dld'].append(escore['dld'].values[0])
         dictione['length'].append(float(f"{lens[sys]:.2f}"))
 
